@@ -10,6 +10,8 @@ export interface RealClinic {
   email: string | null;
   website: string | null;
   priceLevelPct: number | null;
+  lat: number | null;
+  lng: number | null;
 }
 
 /** Compact price entry: [clinicPrice, referencePrice] — null if clinic doesn't report */
@@ -73,7 +75,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 62 94",
     "email": "info@adental.se",
     "website": "http://www.adental.se/",
-    "priceLevelPct": 11
+    "priceLevelPct": 11,
+    "lat": 59.33951,
+    "lng": 18.08019
   },
   {
     "id": "8566",
@@ -84,7 +88,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.33591,
+    "lng": 18.05929
   },
   {
     "id": "1735",
@@ -95,7 +101,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 36 48 00, 08 - 36 51 16",
     "email": "info@aftaakuttandvard.se",
     "website": "https://www.aftaakuttandvard.se/",
-    "priceLevelPct": -3
+    "priceLevelPct": -3,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "6356",
@@ -106,7 +114,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 614 54 00",
     "email": "christina.malmsjo@ak.se",
     "website": "http://www.ak.se",
-    "priceLevelPct": 86
+    "priceLevelPct": 86,
+    "lat": 59.34963,
+    "lng": 18.09321
   },
   {
     "id": "1819",
@@ -117,7 +127,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 751 53 43",
     "email": "info@akallatandlakarpraktik.se",
     "website": "https://akallatandlakarpraktik.se/",
-    "priceLevelPct": 4
+    "priceLevelPct": 4,
+    "lat": 59.41316,
+    "lng": 17.92039
   },
   {
     "id": "2136",
@@ -128,7 +140,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 31 89 09",
     "email": "tdl.mary.swenson@gmail.com",
     "website": "https://www.maryswenson.se",
-    "priceLevelPct": 8
+    "priceLevelPct": 8,
+    "lat": 59.34394,
+    "lng": 18.05468
   },
   {
     "id": "1891",
@@ -139,7 +153,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 5
+    "priceLevelPct": 5,
+    "lat": 59.29467,
+    "lng": 18.00965
   },
   {
     "id": "2133",
@@ -150,7 +166,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -11
+    "priceLevelPct": -11,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "1281",
@@ -161,7 +179,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.32885,
+    "lng": 17.98427
   },
   {
     "id": "6352",
@@ -172,7 +192,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 63
+    "priceLevelPct": 63,
+    "lat": 59.33506,
+    "lng": 18.07125
   },
   {
     "id": "4995",
@@ -183,7 +205,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 409 088 00",
     "email": "info@ama-dental.se",
     "website": "https://www.ama-dental.se/",
-    "priceLevelPct": 28
+    "priceLevelPct": 28,
+    "lat": 59.29418,
+    "lng": 18.09719
   },
   {
     "id": "1838",
@@ -194,7 +218,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 32 24 21",
     "email": "info@aminidental.se",
     "website": "http://www.aminidental.se/",
-    "priceLevelPct": 55
+    "priceLevelPct": 55,
+    "lat": 59.34197,
+    "lng": 18.04787
   },
   {
     "id": "1456",
@@ -205,7 +231,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 667 40 25",
     "email": "info@angelastangel.com",
     "website": "https://www.tandlakareostermalm.nu",
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.33378,
+    "lng": 18.07792
   },
   {
     "id": "2434",
@@ -216,7 +244,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 6
+    "priceLevelPct": 6,
+    "lat": 59.33977,
+    "lng": 17.93954
   },
   {
     "id": "4830",
@@ -227,7 +257,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-41004011",
     "email": "expresscentralen@aquadental.se",
     "website": "https://www.aquadental.se/",
-    "priceLevelPct": 38
+    "priceLevelPct": 38,
+    "lat": 59.32984,
+    "lng": 18.06032
   },
   {
     "id": "8177",
@@ -238,7 +270,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-400 640 36",
     "email": "farsta@aquadental.se",
     "website": "https://www.aquadental.se",
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.24218,
+    "lng": 18.09092
   },
   {
     "id": "4829",
@@ -249,7 +283,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-12135258",
     "email": "hammarbysjostad@aquadental.se",
     "website": "https://www.aquadental.se/",
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.30143,
+    "lng": 18.10226
   },
   {
     "id": "4827",
@@ -260,7 +296,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-12135256",
     "email": "kungsholmen@aquadental.se",
     "website": "https://www.aquadental.se/",
-    "priceLevelPct": 49
+    "priceLevelPct": 49,
+    "lat": 59.32807,
+    "lng": 18.03485
   },
   {
     "id": "9084",
@@ -271,7 +309,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": "https://www.aquadental.se",
-    "priceLevelPct": 45
+    "priceLevelPct": 45,
+    "lat": 59.33627,
+    "lng": 18.08449
   },
   {
     "id": "8741",
@@ -282,7 +322,9 @@ export const clinics: RealClinic[] = [
     "phone": "086111110",
     "email": "mood@aquadental.se",
     "website": "https://www.aquadental.se",
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.33436,
+    "lng": 18.07101
   },
   {
     "id": "7991",
@@ -293,7 +335,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-7370075",
     "email": "narkoskliniken.sthlm@aquadental.se",
     "website": "https://www.aquadental.se",
-    "priceLevelPct": 40
+    "priceLevelPct": 40,
+    "lat": 59.32845,
+    "lng": 18.01729
   },
   {
     "id": "7630",
@@ -304,7 +348,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-343122",
     "email": "odenplan@aquadental.se",
     "website": "https://www.aquadental.se/",
-    "priceLevelPct": 36
+    "priceLevelPct": 36,
+    "lat": 59.34089,
+    "lng": 18.04659
   },
   {
     "id": "1858",
@@ -315,7 +361,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-12139595",
     "email": "specialistkliniken.sthlm@aquadental.se",
     "website": "https://www.aquadental.se/",
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.34079,
+    "lng": 18.05732
   },
   {
     "id": "4828",
@@ -326,7 +374,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-12135257",
     "email": "ostermalm@aquadental.se",
     "website": "https://www.aquadental.se/",
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.34152,
+    "lng": 18.07737
   },
   {
     "id": "9067",
@@ -337,7 +387,9 @@ export const clinics: RealClinic[] = [
     "phone": "0729121813",
     "email": "parvin.bonab@gmail.com",
     "website": null,
-    "priceLevelPct": -12
+    "priceLevelPct": -12,
+    "lat": 59.30097,
+    "lng": 17.95875
   },
   {
     "id": "4964",
@@ -348,7 +400,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -1
+    "priceLevelPct": -1,
+    "lat": 59.30097,
+    "lng": 17.95875
   },
   {
     "id": "2639",
@@ -359,7 +413,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 36 57 70",
     "email": "info@badental.se",
     "website": "http://www.badental.se/",
-    "priceLevelPct": 3
+    "priceLevelPct": 3,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "8145",
@@ -370,7 +426,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-390600",
     "email": null,
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.27649,
+    "lng": 18.13195
   },
   {
     "id": "2443",
@@ -381,7 +439,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.32899,
+    "lng": 18.03138
   },
   {
     "id": "7615",
@@ -392,7 +452,9 @@ export const clinics: RealClinic[] = [
     "phone": "86505103",
     "email": "info.banjamil@ptj.se",
     "website": "https://www.ptj.se/ban-jamil-tandvard",
-    "priceLevelPct": 54
+    "priceLevelPct": 54,
+    "lat": 59.33112,
+    "lng": 18.03042
   },
   {
     "id": "1759",
@@ -403,7 +465,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.26076,
+    "lng": 18.04343
   },
   {
     "id": "1115",
@@ -414,7 +478,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 11
+    "priceLevelPct": 11,
+    "lat": 59.2698,
+    "lng": 18.04962
   },
   {
     "id": "2017",
@@ -425,7 +491,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.33397,
+    "lng": 18.08108
   },
   {
     "id": "8752",
@@ -436,7 +504,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.33277,
+    "lng": 18.08167
   },
   {
     "id": "7745",
@@ -447,7 +517,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 30 92 97",
     "email": "info@birkatandhalsa.se",
     "website": "https://www.birkatandhalsa.se/",
-    "priceLevelPct": 40
+    "priceLevelPct": 40,
+    "lat": 59.34003,
+    "lng": 18.03422
   },
   {
     "id": "7746",
@@ -458,7 +530,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 30 92 97",
     "email": "info@birkatandhalsa.se",
     "website": "https://www.birkatandhalsa.se/",
-    "priceLevelPct": 32
+    "priceLevelPct": 32,
+    "lat": 59.34003,
+    "lng": 18.03422
   },
   {
     "id": "1762",
@@ -469,7 +543,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 750 68 08",
     "email": null,
     "website": null,
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.4038,
+    "lng": 17.94157
   },
   {
     "id": "1577",
@@ -480,7 +556,9 @@ export const clinics: RealClinic[] = [
     "phone": "070 - 852 86 90",
     "email": null,
     "website": null,
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.33248,
+    "lng": 18.08063
   },
   {
     "id": "3497",
@@ -491,7 +569,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 26
+    "priceLevelPct": 26,
+    "lat": 59.36407,
+    "lng": 17.87141
   },
   {
     "id": "8019",
@@ -502,7 +582,9 @@ export const clinics: RealClinic[] = [
     "phone": "86414676",
     "email": "bohuskliniken19@gmail.com",
     "website": "https://www.bohuskliniken.com",
-    "priceLevelPct": 13
+    "priceLevelPct": 13,
+    "lat": 59.30676,
+    "lng": 18.07917
   },
   {
     "id": "1414",
@@ -513,7 +595,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 49
+    "priceLevelPct": 49,
+    "lat": 59.34056,
+    "lng": 18.07843
   },
   {
     "id": "2036",
@@ -524,7 +608,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 30
+    "priceLevelPct": 30,
+    "lat": 59.34056,
+    "lng": 18.07843
   },
   {
     "id": "2429",
@@ -535,7 +621,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 11
+    "priceLevelPct": 11,
+    "lat": 59.29515,
+    "lng": 17.93464
   },
   {
     "id": "2200",
@@ -546,7 +634,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 5
+    "priceLevelPct": 5,
+    "lat": 59.36407,
+    "lng": 17.86927
   },
   {
     "id": "7658",
@@ -557,7 +647,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 22
+    "priceLevelPct": 22,
+    "lat": 59.31842,
+    "lng": 18.05632
   },
   {
     "id": "9497",
@@ -568,7 +660,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 45
+    "priceLevelPct": 45,
+    "lat": 59.34061,
+    "lng": 18.03076
   },
   {
     "id": "1554",
@@ -579,7 +673,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-20 06 80",
     "email": "info@citydental.se",
     "website": "https://citydental.se/",
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.33083,
+    "lng": 18.06433
   },
   {
     "id": "4726",
@@ -590,7 +686,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 32 45 00",
     "email": "klinik@citytandakut.se",
     "website": "https://www.citytandakut.se",
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.34061,
+    "lng": 18.03076
   },
   {
     "id": "1798",
@@ -601,7 +699,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 790 09 43",
     "email": "cn@city-praktiken.com",
     "website": null,
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.334,
+    "lng": 18.06118
   },
   {
     "id": "3438",
@@ -612,7 +712,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 74
+    "priceLevelPct": 74,
+    "lat": 59.31663,
+    "lng": 18.07074
   },
   {
     "id": "9271",
@@ -623,7 +725,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-160044",
     "email": "patient@delectusdental.se",
     "website": "https://www.delectusdental.se",
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.34159,
+    "lng": 18.08815
   },
   {
     "id": "1071",
@@ -634,7 +738,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 8
+    "priceLevelPct": 8,
+    "lat": 59.34302,
+    "lng": 18.0643
   },
   {
     "id": "9309",
@@ -645,7 +751,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 27
+    "priceLevelPct": 27,
+    "lat": 59.27239,
+    "lng": 17.89134
   },
   {
     "id": "8939",
@@ -656,7 +764,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 26
+    "priceLevelPct": 26,
+    "lat": 59.27239,
+    "lng": 17.89134
   },
   {
     "id": "2065",
@@ -667,7 +777,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 21 21 06",
     "email": "kirurgi@dentalakademin.se",
     "website": "https://www.dentalakademin.se",
-    "priceLevelPct": 52
+    "priceLevelPct": 52,
+    "lat": 59.34356,
+    "lng": 18.06557
   },
   {
     "id": "6469",
@@ -678,7 +790,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -4
+    "priceLevelPct": -4,
+    "lat": 59.34356,
+    "lng": 18.06557
   },
   {
     "id": "6429",
@@ -689,7 +803,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 34
+    "priceLevelPct": 34,
+    "lat": 59.3358,
+    "lng": 18.06672
   },
   {
     "id": "1829",
@@ -700,7 +816,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 20 91 40",
     "email": null,
     "website": "https://www.dentsmile.se",
-    "priceLevelPct": 45
+    "priceLevelPct": 45,
+    "lat": 59.33564,
+    "lng": 18.06447
   },
   {
     "id": "2411",
@@ -711,7 +829,9 @@ export const clinics: RealClinic[] = [
     "phone": "073 - 647 25 00",
     "email": null,
     "website": "https://www.tandhygienistericaburman.se",
-    "priceLevelPct": -6
+    "priceLevelPct": -6,
+    "lat": 59.33457,
+    "lng": 18.0864
   },
   {
     "id": "4386",
@@ -722,7 +842,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 412 007 50",
     "email": "drottninggatan@distriktstandvarden.se",
     "website": "http://distriktstandvarden.se/drottninggatan-65/",
-    "priceLevelPct": 50
+    "priceLevelPct": 50,
+    "lat": 59.33502,
+    "lng": 18.06017
   },
   {
     "id": "4388",
@@ -733,7 +855,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 412 007 55",
     "email": "fridhemsplan@distriktstandvarden.se",
     "website": "https://distriktstandvarden.se/fridhemsplan/",
-    "priceLevelPct": 49
+    "priceLevelPct": 49,
+    "lat": 59.33176,
+    "lng": 18.03126
   },
   {
     "id": "4389",
@@ -744,7 +868,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 412 007 58",
     "email": "gardet@distriktstandvarden.se",
     "website": "https://distriktstandvarden.se/gärdet/",
-    "priceLevelPct": 45
+    "priceLevelPct": 45,
+    "lat": 59.34315,
+    "lng": 18.08861
   },
   {
     "id": "4983",
@@ -755,7 +881,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 411 16 11",
     "email": "kungsgatan@distriktstandvarden.se",
     "website": "https://distriktstandvarden.se/kungsgatan/",
-    "priceLevelPct": 45
+    "priceLevelPct": 45,
+    "lat": 59.33479,
+    "lng": 18.06013
   },
   {
     "id": "6573",
@@ -766,7 +894,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 51
+    "priceLevelPct": 51,
+    "lat": 59.30999,
+    "lng": 18.02186
   },
   {
     "id": "6473",
@@ -777,7 +907,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 50
+    "priceLevelPct": 50,
+    "lat": 59.31247,
+    "lng": 18.08048
   },
   {
     "id": "6572",
@@ -788,7 +920,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 48
+    "priceLevelPct": 48,
+    "lat": 59.3389,
+    "lng": 18.06067
   },
   {
     "id": "9253",
@@ -799,7 +933,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 47
+    "priceLevelPct": 47,
+    "lat": 59.32382,
+    "lng": 17.95647
   },
   {
     "id": "4391",
@@ -810,7 +946,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 412 007 59",
     "email": "asogatan@distriktstandvarden.se",
     "website": "https://distriktstandvarden.se/åsögatan/",
-    "priceLevelPct": 50
+    "priceLevelPct": 50,
+    "lat": 59.31261,
+    "lng": 18.07226
   },
   {
     "id": "10238",
@@ -821,7 +959,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 20
+    "priceLevelPct": 20,
+    "lat": 59.38129,
+    "lng": 17.81785
   },
   {
     "id": "9720",
@@ -832,7 +972,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -1
+    "priceLevelPct": -1,
+    "lat": 59.4038,
+    "lng": 17.94157
   },
   {
     "id": "6342",
@@ -843,7 +985,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -6
+    "priceLevelPct": -6,
+    "lat": 59.27703,
+    "lng": 17.90624
   },
   {
     "id": "3430",
@@ -854,7 +998,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-6686410",
     "email": "drakenbergskliniken@ptj.se",
     "website": "https://www.ptj.se/drakenbergskliniken/",
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "9116",
@@ -865,7 +1011,9 @@ export const clinics: RealClinic[] = [
     "phone": "086471923",
     "email": "info@egdent.se",
     "website": "https://www.egdent.se",
-    "priceLevelPct": 6
+    "priceLevelPct": 6,
+    "lat": 59.27798,
+    "lng": 18.00597
   },
   {
     "id": "8953",
@@ -876,7 +1024,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 30
+    "priceLevelPct": 30,
+    "lat": 59.34067,
+    "lng": 18.0645
   },
   {
     "id": "2441",
@@ -887,7 +1037,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 663 33 33",
     "email": "info@emadental.se",
     "website": "https://www.emadental.se",
-    "priceLevelPct": null
+    "priceLevelPct": null,
+    "lat": 59.34159,
+    "lng": 18.09138
   },
   {
     "id": "6350",
@@ -898,7 +1050,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 39
+    "priceLevelPct": 39,
+    "lat": 59.33609,
+    "lng": 18.068
   },
   {
     "id": "7729",
@@ -909,7 +1063,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 659 41 53",
     "email": "info@enskedetandhorna.se",
     "website": "https://www.enskedetandhorna.se",
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.28575,
+    "lng": 18.09382
   },
   {
     "id": "2208",
@@ -920,7 +1076,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 39 39 01",
     "email": "info@enskedetandvrd.se",
     "website": "https://www.enskedetandvard.se",
-    "priceLevelPct": 38
+    "priceLevelPct": 38,
+    "lat": 59.27902,
+    "lng": 18.06408
   },
   {
     "id": "3441",
@@ -931,7 +1089,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 604 70 09",
     "email": "enskedetandlakarna@ptj.se",
     "website": "https://www.ptj.se/enskedetandlakarna",
-    "priceLevelPct": 26
+    "priceLevelPct": 26,
+    "lat": 59.29434,
+    "lng": 18.08558
   },
   {
     "id": "4976",
@@ -942,7 +1102,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 556 987 00",
     "email": "info@erikssonkliniken.se",
     "website": "https://www.erikssonkliniken.se",
-    "priceLevelPct": 41
+    "priceLevelPct": 41,
+    "lat": 59.31764,
+    "lng": 18.07167
   },
   {
     "id": "8203",
@@ -953,7 +1115,9 @@ export const clinics: RealClinic[] = [
     "phone": "767149231",
     "email": "eurotand@gmail.com",
     "website": "https://www.eurotandklinik.se",
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.28504,
+    "lng": 18.08994
   },
   {
     "id": "9736",
@@ -964,7 +1128,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 20
+    "priceLevelPct": 20,
+    "lat": 59.31893,
+    "lng": 18.07431
   },
   {
     "id": "2356",
@@ -975,7 +1141,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 41
+    "priceLevelPct": 41,
+    "lat": 59.33901,
+    "lng": 18.00605
   },
   {
     "id": "1443",
@@ -986,7 +1154,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.2412,
+    "lng": 18.09179
   },
   {
     "id": "3452",
@@ -997,7 +1167,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 605 80 20",
     "email": "info@ftt.se",
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.24288,
+    "lng": 18.09332
   },
   {
     "id": "1802",
@@ -1008,7 +1180,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 94 52 60",
     "email": "info@farstapraktiken.se",
     "website": "http://www.farstapraktiken.se/",
-    "priceLevelPct": 26
+    "priceLevelPct": 26,
+    "lat": 59.24073,
+    "lng": 18.09232
   },
   {
     "id": "9066",
@@ -1019,7 +1193,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -22
+    "priceLevelPct": -22,
+    "lat": 59.34685,
+    "lng": 17.90761
   },
   {
     "id": "8376",
@@ -1030,7 +1206,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -4
+    "priceLevelPct": -4,
+    "lat": 59.34061,
+    "lng": 18.03076
   },
   {
     "id": "1765",
@@ -1041,7 +1219,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 20 30 35",
     "email": "farah.ghe@gmail.com",
     "website": "https://www.fgdental.se",
-    "priceLevelPct": 6
+    "priceLevelPct": 6,
+    "lat": 59.34597,
+    "lng": 18.06051
   },
   {
     "id": "2699",
@@ -1052,7 +1232,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.31379,
+    "lng": 18.07384
   },
   {
     "id": "1817",
@@ -1063,7 +1245,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 562 972 77",
     "email": null,
     "website": "https://www.flexident.se",
-    "priceLevelPct": -3
+    "priceLevelPct": -3,
+    "lat": 59.35678,
+    "lng": 17.95729
   },
   {
     "id": "4408",
@@ -1074,7 +1258,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 156 80",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/akut-tandvard/akuten",
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.33466,
+    "lng": 18.03193
   },
   {
     "id": "4426",
@@ -1085,7 +1271,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 160 70",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/bjorkhagen",
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.29434,
+    "lng": 18.08558
   },
   {
     "id": "4457",
@@ -1096,7 +1284,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 161 50",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/brommaplan",
-    "priceLevelPct": 13
+    "priceLevelPct": 13,
+    "lat": 59.33854,
+    "lng": 17.93945
   },
   {
     "id": "4419",
@@ -1107,7 +1297,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 154 75",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/danvikstull",
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.31301,
+    "lng": 18.10128
   },
   {
     "id": "4409",
@@ -1118,7 +1310,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 165 83",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/specialisttandvard/eastmaninstitutet-bettfysiologi",
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.3403,
+    "lng": 18.04643
   },
   {
     "id": "4416",
@@ -1129,7 +1323,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 156 38",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/specialisttandvard/eastmaninstitutet-endodonti",
-    "priceLevelPct": 23
+    "priceLevelPct": 23,
+    "lat": 59.3403,
+    "lng": 18.04643
   },
   {
     "id": "4410",
@@ -1140,7 +1336,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 165 70",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/specialisttandvard/eastmaninstitutet-kakkirurgi",
-    "priceLevelPct": 34
+    "priceLevelPct": 34,
+    "lat": 59.3403,
+    "lng": 18.04643
   },
   {
     "id": "6574",
@@ -1151,7 +1349,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.3403,
+    "lng": 18.04643
   },
   {
     "id": "4412",
@@ -1162,7 +1362,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 165 10",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/specialisttandvard/eastmaninstitutet-ortodonti",
-    "priceLevelPct": 6
+    "priceLevelPct": 6,
+    "lat": 59.3403,
+    "lng": 18.04643
   },
   {
     "id": "4415",
@@ -1173,7 +1375,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 164 00",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/specialisttandvard/eastmaninstitutet-parodontologi",
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.3403,
+    "lng": 18.04643
   },
   {
     "id": "4413",
@@ -1184,7 +1388,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 156 00",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/specialisttandvard/eastmaninstitutet-protetik",
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.3403,
+    "lng": 18.04643
   },
   {
     "id": "4428",
@@ -1195,7 +1401,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 160 50",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/farsta",
-    "priceLevelPct": 13
+    "priceLevelPct": 13,
+    "lat": 59.24288,
+    "lng": 18.09332
   },
   {
     "id": "4433",
@@ -1206,7 +1414,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 167 00",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/fruangen",
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.28549,
+    "lng": 17.96503
   },
   {
     "id": "4427",
@@ -1217,7 +1427,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 155 30",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/gubbangen",
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.26217,
+    "lng": 18.08297
   },
   {
     "id": "4421",
@@ -1228,7 +1440,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 164 50",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/hornstull",
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.31611,
+    "lng": 18.0345
   },
   {
     "id": "4429",
@@ -1239,7 +1453,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 155 50",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/hogdalen",
-    "priceLevelPct": 15
+    "priceLevelPct": 15,
+    "lat": 59.26332,
+    "lng": 18.04101
   },
   {
     "id": "4455",
@@ -1250,7 +1466,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 153 75",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/rinkeby",
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "4418",
@@ -1261,7 +1479,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 176 00",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/karlaplan",
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "4456",
@@ -1272,7 +1492,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 168 00",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/kista",
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.40318,
+    "lng": 17.94429
   },
   {
     "id": "4422",
@@ -1283,7 +1505,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 163 40",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/liljeholmen",
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.30999,
+    "lng": 18.02186
   },
   {
     "id": "4424",
@@ -1294,7 +1518,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 164 30",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/rosenlund",
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.31088,
+    "lng": 18.06212
   },
   {
     "id": "4420",
@@ -1305,7 +1531,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 159 80",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/skanstull",
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.30863,
+    "lng": 18.07581
   },
   {
     "id": "4430",
@@ -1316,7 +1544,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 154 00",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/skarholmen",
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.27526,
+    "lng": 17.90795
   },
   {
     "id": "4454",
@@ -1327,7 +1557,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 169 80",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/spanga",
-    "priceLevelPct": 11
+    "priceLevelPct": 11,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "4407",
@@ -1338,7 +1570,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 153 20",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/medicinsk-tandvard/stockholms-sjukhem",
-    "priceLevelPct": 8
+    "priceLevelPct": 8,
+    "lat": 59.33303,
+    "lng": 18.02491
   },
   {
     "id": "4417",
@@ -1349,7 +1583,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 165 90",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/vasastan",
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.33843,
+    "lng": 18.0462
   },
   {
     "id": "4453",
@@ -1360,7 +1596,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 152 00",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/vallingby",
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.36191,
+    "lng": 17.87362
   },
   {
     "id": "4432",
@@ -1371,7 +1609,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 169 40",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/vastertorp",
-    "priceLevelPct": 13
+    "priceLevelPct": 13,
+    "lat": 59.2928,
+    "lng": 17.96783
   },
   {
     "id": "4425",
@@ -1382,7 +1622,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 123 157 55",
     "email": null,
     "website": "https://www.folktandvardenstockholm.se/vara-kliniker/allmantandvard/arsta",
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.29857,
+    "lng": 18.04996
   },
   {
     "id": "6578",
@@ -1393,7 +1635,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -14
+    "priceLevelPct": -14,
+    "lat": 59.31842,
+    "lng": 18.02573
   },
   {
     "id": "2664",
@@ -1404,7 +1648,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 650 53 35",
     "email": null,
     "website": null,
-    "priceLevelPct": 53
+    "priceLevelPct": 53,
+    "lat": 59.32864,
+    "lng": 18.04323
   },
   {
     "id": "6416",
@@ -1415,7 +1661,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -18
+    "priceLevelPct": -18,
+    "lat": 59.33591,
+    "lng": 18.05929
   },
   {
     "id": "8394",
@@ -1426,7 +1674,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -5
+    "priceLevelPct": -5,
+    "lat": 59.31516,
+    "lng": 18.08175
   },
   {
     "id": "6189",
@@ -1437,7 +1687,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -3
+    "priceLevelPct": -3,
+    "lat": 59.36765,
+    "lng": 17.8445
   },
   {
     "id": "6292",
@@ -1448,7 +1700,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 88 89 20",
     "email": "info@fruangendental.se",
     "website": "https://www.fruangendental.se/",
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.28546,
+    "lng": 17.96388
   },
   {
     "id": "1258",
@@ -1459,7 +1713,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.3371,
+    "lng": 18.06173
   },
   {
     "id": "6475",
@@ -1470,7 +1726,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.34067,
+    "lng": 18.0645
   },
   {
     "id": "1536",
@@ -1481,7 +1739,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 51 56",
     "email": "info@gabriellastandvard.se",
     "website": "https://www.gabriellastandvard.se",
-    "priceLevelPct": 51
+    "priceLevelPct": 51,
+    "lat": 59.33451,
+    "lng": 18.07735
   },
   {
     "id": "6306",
@@ -1492,7 +1752,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 752 64 50",
     "email": "info@galleriatandlakarna.se",
     "website": "https://www.galleriatandlakarna.se/",
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.40191,
+    "lng": 17.94256
   },
   {
     "id": "6579",
@@ -1503,7 +1765,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.30808,
+    "lng": 18.07725
   },
   {
     "id": "7660",
@@ -1514,7 +1778,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": null
+    "priceLevelPct": null,
+    "lat": 59.36181,
+    "lng": 17.87105
   },
   {
     "id": "9887",
@@ -1525,7 +1791,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-6001212",
     "email": "hot.amer64@hotmail.com",
     "website": "https://globentandlakarna.weebly.com",
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.29182,
+    "lng": 18.08241
   },
   {
     "id": "9110",
@@ -1536,7 +1804,9 @@ export const clinics: RealClinic[] = [
     "phone": "0729121813",
     "email": "Parvin.bonab@gmail.com",
     "website": null,
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.30859,
+    "lng": 18.07676
   },
   {
     "id": "6428",
@@ -1547,7 +1817,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 643 90 11",
     "email": null,
     "website": "https://www.gloss-floss.se",
-    "priceLevelPct": 51
+    "priceLevelPct": 51,
+    "lat": 59.30859,
+    "lng": 18.07676
   },
   {
     "id": "7648",
@@ -1558,7 +1830,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -5
+    "priceLevelPct": -5,
+    "lat": 59.31627,
+    "lng": 18.01343
   },
   {
     "id": "1548",
@@ -1569,7 +1843,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 19 63 25",
     "email": "info@grondalspraktiken.se",
     "website": "https://www.grondalspraktiken.se",
-    "priceLevelPct": 22
+    "priceLevelPct": 22,
+    "lat": 59.31609,
+    "lng": 18.01194
   },
   {
     "id": "8783",
@@ -1580,7 +1856,9 @@ export const clinics: RealClinic[] = [
     "phone": "08196325",
     "email": "info@grondalspraktiken.se",
     "website": "https://www.grondalspraktiken.se",
-    "priceLevelPct": -10
+    "priceLevelPct": -10,
+    "lat": 59.31609,
+    "lng": 18.01194
   },
   {
     "id": "6238",
@@ -1591,7 +1869,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 51
+    "priceLevelPct": 51,
+    "lat": 59.31876,
+    "lng": 18.0711
   },
   {
     "id": "6223",
@@ -1602,7 +1882,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 580 380 00",
     "email": "info@hagatandlakeri.se",
     "website": "https://hagatandlakeri.se/",
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.3479,
+    "lng": 18.03485
   },
   {
     "id": "1876",
@@ -1613,7 +1895,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -1
+    "priceLevelPct": -1,
+    "lat": 59.26192,
+    "lng": 18.01515
   },
   {
     "id": "1072",
@@ -1624,7 +1908,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 35 50",
     "email": "info@hml.nu",
     "website": "https://www.hml.nu",
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.30751,
+    "lng": 18.07113
   },
   {
     "id": "4808",
@@ -1635,7 +1921,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.32739,
+    "lng": 18.01744
   },
   {
     "id": "4807",
@@ -1646,7 +1934,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 39
+    "priceLevelPct": 39,
+    "lat": 59.33673,
+    "lng": 18.0693
   },
   {
     "id": "9862",
@@ -1657,7 +1947,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 22
+    "priceLevelPct": 22,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "1873",
@@ -1668,7 +1960,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 32
+    "priceLevelPct": 32,
+    "lat": 59.31506,
+    "lng": 18.03489
   },
   {
     "id": "1232",
@@ -1679,7 +1973,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 20 64 22",
     "email": null,
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.334,
+    "lng": 18.06118
   },
   {
     "id": "2422",
@@ -1690,7 +1986,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": null
+    "priceLevelPct": null,
+    "lat": 59.39589,
+    "lng": 17.88841
   },
   {
     "id": "1381",
@@ -1701,7 +1999,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 32
+    "priceLevelPct": 32,
+    "lat": 59.33377,
+    "lng": 18.07119
   },
   {
     "id": "1882",
@@ -1712,7 +2012,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 84 37 57",
     "email": "info@hornsgatanstandvard.se",
     "website": "https://www.hornsgatanstandvard.se",
-    "priceLevelPct": 32
+    "priceLevelPct": 32,
+    "lat": 59.31788,
+    "lng": 18.05358
   },
   {
     "id": "6576",
@@ -1723,7 +2025,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-57032388",
     "email": "info@humlegardentandvard.se",
     "website": "https://www.humlegarden-varmdo.se",
-    "priceLevelPct": 8
+    "priceLevelPct": 8,
+    "lat": 59.33764,
+    "lng": 18.07052
   },
   {
     "id": "9540",
@@ -1734,7 +2038,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-6456200",
     "email": "Reception@hagerstenstandteam.se",
     "website": "https://www.hagerstenstandteam.se",
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.29758,
+    "lng": 17.98266
   },
   {
     "id": "2305",
@@ -1745,7 +2051,9 @@ export const clinics: RealClinic[] = [
     "phone": "073 - 560 23 76",
     "email": "jstandvard@outlook.com",
     "website": "https://www.tandlakareNDS.se",
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.35935,
+    "lng": 18.09411
   },
   {
     "id": "2049",
@@ -1756,7 +2064,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "yadi.gol@hotmail.com",
     "website": null,
-    "priceLevelPct": 6
+    "priceLevelPct": 6,
+    "lat": 59.36741,
+    "lng": 17.84301
   },
   {
     "id": "6018",
@@ -1767,7 +2077,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 94 39 03",
     "email": "info.hokarangstandlakarna@ptj.se",
     "website": "https://www.hokarangstandlakarna.se",
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.25636,
+    "lng": 18.08088
   },
   {
     "id": "6190",
@@ -1778,7 +2090,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 20 74 98",
     "email": "hotorgstandlakarna@ptj.se",
     "website": null,
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.33316,
+    "lng": 18.06512
   },
   {
     "id": "3396",
@@ -1789,7 +2103,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.33316,
+    "lng": 18.06512
   },
   {
     "id": "1005",
@@ -1800,7 +2116,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 31 19, 08 - 619 81 19",
     "email": "johan@tandlakarehellsing.se",
     "website": "https://www.tandläkarehellsing.se",
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.34104,
+    "lng": 18.07986
   },
   {
     "id": "3410",
@@ -1811,7 +2129,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 673 51 00",
     "email": null,
     "website": "http://www.istl.se/",
-    "priceLevelPct": 15
+    "priceLevelPct": 15,
+    "lat": 59.34068,
+    "lng": 18.059
   },
   {
     "id": "8529",
@@ -1822,7 +2142,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 30
+    "priceLevelPct": 30,
+    "lat": 59.3167,
+    "lng": 18.07193
   },
   {
     "id": "2591",
@@ -1833,7 +2155,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 4
+    "priceLevelPct": 4,
+    "lat": 59.34113,
+    "lng": 18.05858
   },
   {
     "id": "6015",
@@ -1844,7 +2168,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 47
+    "priceLevelPct": 47,
+    "lat": 59.33979,
+    "lng": 18.05815
   },
   {
     "id": "10060",
@@ -1855,7 +2181,9 @@ export const clinics: RealClinic[] = [
     "phone": "86605100",
     "email": "tandlakare.veijalainen@gmail.com",
     "website": "https://www.praktikertjanst.se/mottagningar/stockholms-l%C3%A4n/stockholm/tandl%C3%A4kare-juha-veijalainen/U0UxNjU1NjA3NzI0MTktMTFKUA==",
-    "priceLevelPct": 32
+    "priceLevelPct": 32,
+    "lat": 59.3364,
+    "lng": 18.08001
   },
   {
     "id": "2258",
@@ -1866,7 +2194,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 760 15 47",
     "email": "info@jarvatandlakarna.se",
     "website": "https://www.jarvatandlakarna.se",
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "2650",
@@ -1877,7 +2207,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 10 11 53",
     "email": "karin@citypraktiken.nu",
     "website": "https://www.citypraktiken.nu",
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.334,
+    "lng": 18.06118
   },
   {
     "id": "1370",
@@ -1888,7 +2220,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 30
+    "priceLevelPct": 30,
+    "lat": 59.33557,
+    "lng": 18.08737
   },
   {
     "id": "1748",
@@ -1899,7 +2233,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 661 03 84",
     "email": "info@karlaplanstandlakarna.se",
     "website": "https://www.karlaplanstandlakarna.se",
-    "priceLevelPct": 61
+    "priceLevelPct": 61,
+    "lat": 59.33813,
+    "lng": 18.0919
   },
   {
     "id": "1815",
@@ -1910,7 +2246,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 665 30 50",
     "email": "mia@karlatandlakarna.se",
     "website": null,
-    "priceLevelPct": 40
+    "priceLevelPct": 40,
+    "lat": 59.33983,
+    "lng": 18.07861
   },
   {
     "id": "8197",
@@ -1921,7 +2259,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 15
+    "priceLevelPct": 15,
+    "lat": 59.34308,
+    "lng": 18.04673
   },
   {
     "id": "8191",
@@ -1932,7 +2272,9 @@ export const clinics: RealClinic[] = [
     "phone": "076- 273 88 14",
     "email": "info@kistagarddental.se",
     "website": "https://kistagarddental.se/",
-    "priceLevelPct": -7
+    "priceLevelPct": -7,
+    "lat": 59.40741,
+    "lng": 17.94493
   },
   {
     "id": "6406",
@@ -1943,7 +2285,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 11
+    "priceLevelPct": 11,
+    "lat": 59.40399,
+    "lng": 17.9406
   },
   {
     "id": "1537",
@@ -1954,7 +2298,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -5
+    "priceLevelPct": -5,
+    "lat": 59.41665,
+    "lng": 17.9195
   },
   {
     "id": "4688",
@@ -1965,7 +2311,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.32847,
+    "lng": 18.04659
   },
   {
     "id": "1859",
@@ -1976,7 +2324,9 @@ export const clinics: RealClinic[] = [
     "phone": "073 - 990 62 35",
     "email": null,
     "website": null,
-    "priceLevelPct": -18
+    "priceLevelPct": -18,
+    "lat": 59.33647,
+    "lng": 18.08268
   },
   {
     "id": "6415",
@@ -1987,7 +2337,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 25
+    "priceLevelPct": 25,
+    "lat": 59.34494,
+    "lng": 18.04798
   },
   {
     "id": "1289",
@@ -1998,7 +2350,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 654 80 60",
     "email": "info@kungstandlakarna.se",
     "website": "https://www.kungstandlakarna.se",
-    "priceLevelPct": 11
+    "priceLevelPct": 11,
+    "lat": 59.33265,
+    "lng": 18.04561
   },
   {
     "id": "8563",
@@ -2009,7 +2363,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-50151100",
     "email": "info@kvalident.se",
     "website": "https://www.kvalident.se",
-    "priceLevelPct": 32
+    "priceLevelPct": 32,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "1813",
@@ -2020,7 +2376,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 648 56 26",
     "email": "karrtorpskliniken@gmail.com",
     "website": null,
-    "priceLevelPct": 13
+    "priceLevelPct": 13,
+    "lat": 59.28479,
+    "lng": 18.11772
   },
   {
     "id": "6526",
@@ -2031,7 +2389,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.29434,
+    "lng": 18.08558
   },
   {
     "id": "2012",
@@ -2042,7 +2402,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "leendetandvard@gmail.com",
     "website": null,
-    "priceLevelPct": null
+    "priceLevelPct": null,
+    "lat": 59.2936,
+    "lng": 18.05288
   },
   {
     "id": "4933",
@@ -2053,7 +2415,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 650 50 50",
     "email": null,
     "website": null,
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.33188,
+    "lng": 18.03005
   },
   {
     "id": "3498",
@@ -2064,7 +2428,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.36407,
+    "lng": 17.87141
   },
   {
     "id": "7618",
@@ -2075,7 +2441,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-668 73 75",
     "email": null,
     "website": "https://ptj.se/tandlakare-linda-scholin",
-    "priceLevelPct": 24
+    "priceLevelPct": 24,
+    "lat": 59.31727,
+    "lng": 18.0327
   },
   {
     "id": "9854",
@@ -2086,7 +2454,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 38
+    "priceLevelPct": 38,
+    "lat": 59.34711,
+    "lng": 17.89476
   },
   {
     "id": "6315",
@@ -2097,7 +2467,9 @@ export const clinics: RealClinic[] = [
     "phone": "010 - 175 07 07",
     "email": "info@lanstandvarden.se",
     "website": "https://lanstandvarden.se/",
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.28559,
+    "lng": 17.96672
   },
   {
     "id": "6126",
@@ -2108,7 +2480,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -20
+    "priceLevelPct": -20,
+    "lat": 59.29434,
+    "lng": 18.08558
   },
   {
     "id": "3412",
@@ -2119,7 +2493,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.33795,
+    "lng": 18.07452
   },
   {
     "id": "8377",
@@ -2130,7 +2506,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 64
+    "priceLevelPct": 64,
+    "lat": 59.34061,
+    "lng": 18.03076
   },
   {
     "id": "3456",
@@ -2141,7 +2519,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 20
+    "priceLevelPct": 20,
+    "lat": 59.28534,
+    "lng": 17.96218
   },
   {
     "id": "6466",
@@ -2152,7 +2532,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.33494,
+    "lng": 18.07179
   },
   {
     "id": "3455",
@@ -2163,7 +2545,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 5
+    "priceLevelPct": 5,
+    "lat": 59.28668,
+    "lng": 17.96347
   },
   {
     "id": "6349",
@@ -2174,7 +2558,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 46
+    "priceLevelPct": 46,
+    "lat": 59.31799,
+    "lng": 18.05571
   },
   {
     "id": "9336",
@@ -2185,7 +2571,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.30583,
+    "lng": 18.03716
   },
   {
     "id": "9866",
@@ -2196,7 +2584,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.33578,
+    "lng": 18.0603
   },
   {
     "id": "8694",
@@ -2207,7 +2597,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 41
+    "priceLevelPct": 41,
+    "lat": 59.28559,
+    "lng": 17.96672
   },
   {
     "id": "3397",
@@ -2218,7 +2610,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 21 68 27",
     "email": null,
     "website": "https://www.ptj.se/tandlakare-mathias-ahl/",
-    "priceLevelPct": 49
+    "priceLevelPct": 49,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "3496",
@@ -2229,7 +2623,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 37 89 37",
     "email": "mats.eriksson@ptj.se",
     "website": null,
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.35924,
+    "lng": 17.88649
   },
   {
     "id": "1637",
@@ -2240,7 +2636,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.33886,
+    "lng": 18.00355
   },
   {
     "id": "2503",
@@ -2251,7 +2649,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 87 01 97",
     "email": "katarina.wolk@telia.com",
     "website": null,
-    "priceLevelPct": 15
+    "priceLevelPct": 15,
+    "lat": 59.36181,
+    "lng": 17.87105
   },
   {
     "id": "1911",
@@ -2262,7 +2662,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 25 38 06, 070 - 778 32 87",
     "email": null,
     "website": null,
-    "priceLevelPct": -7
+    "priceLevelPct": -7,
+    "lat": 59.32272,
+    "lng": 17.93953
   },
   {
     "id": "6571",
@@ -2273,7 +2675,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.34248,
+    "lng": 18.08098
   },
   {
     "id": "8710",
@@ -2284,7 +2688,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.33852,
+    "lng": 18.03604
   },
   {
     "id": "9875",
@@ -2295,7 +2701,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -6
+    "priceLevelPct": -6,
+    "lat": 59.34061,
+    "lng": 18.03076
   },
   {
     "id": "7989",
@@ -2306,7 +2714,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 22
+    "priceLevelPct": 22,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "8940",
@@ -2317,7 +2727,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -5
+    "priceLevelPct": -5,
+    "lat": 59.36401,
+    "lng": 17.87145
   },
   {
     "id": "7657",
@@ -2328,7 +2740,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -15
+    "priceLevelPct": -15,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "6465",
@@ -2339,7 +2753,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -19
+    "priceLevelPct": -19,
+    "lat": 59.30386,
+    "lng": 18.08856
   },
   {
     "id": "8004",
@@ -2350,7 +2766,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-542 485 85",
     "email": "info@muntandvard.se",
     "website": "https://www.muntandvard.se",
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.3407,
+    "lng": 18.03705
   },
   {
     "id": "9920",
@@ -2361,7 +2779,9 @@ export const clinics: RealClinic[] = [
     "phone": "0707170783",
     "email": "info@sarabksalehi.com",
     "website": null,
-    "priceLevelPct": -9
+    "priceLevelPct": -9,
+    "lat": 59.34685,
+    "lng": 17.90761
   },
   {
     "id": "2308",
@@ -2372,7 +2792,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 702 21 80",
     "email": "tandhygienisten@outlook.com",
     "website": "http://www.tandhygienisten.net/",
-    "priceLevelPct": -21
+    "priceLevelPct": -21,
+    "lat": 59.31843,
+    "lng": 18.07127
   },
   {
     "id": "2201",
@@ -2383,7 +2805,9 @@ export const clinics: RealClinic[] = [
     "phone": "072 - 730 02 44",
     "email": "carina@munlyckan.se",
     "website": "https://www.munlyckan.se",
-    "priceLevelPct": -5
+    "priceLevelPct": -5,
+    "lat": 59.33284,
+    "lng": 17.9783
   },
   {
     "id": "8021",
@@ -2394,7 +2818,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.33284,
+    "lng": 17.9783
   },
   {
     "id": "9087",
@@ -2405,7 +2831,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-106337",
     "email": "info@malarkliniken.com",
     "website": "https://www.malarkliniken.com",
-    "priceLevelPct": 39
+    "priceLevelPct": 39,
+    "lat": 59.32251,
+    "lng": 18.07257
   },
   {
     "id": "6470",
@@ -2416,7 +2844,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.33439,
+    "lng": 18.07316
   },
   {
     "id": "7849",
@@ -2427,7 +2857,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 737 00 75",
     "email": "info@narkoskliniken.se",
     "website": "https://www.narkoskliniken.se",
-    "priceLevelPct": 46
+    "priceLevelPct": 46,
+    "lat": 59.32845,
+    "lng": 18.01729
   },
   {
     "id": "8577",
@@ -2438,7 +2870,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "8804",
@@ -2449,7 +2883,9 @@ export const clinics: RealClinic[] = [
     "phone": "087370080",
     "email": "info@norrmalmstandlakarna.se",
     "website": "https://www.norrmalmstandlakarna.se",
-    "priceLevelPct": 34
+    "priceLevelPct": 34,
+    "lat": 59.33506,
+    "lng": 18.07125
   },
   {
     "id": "1104",
@@ -2460,7 +2896,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 661 04 41",
     "email": "info@nybrokliniken.se",
     "website": "https://www.nybrokliniken.se",
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.33867,
+    "lng": 18.08062
   },
   {
     "id": "1816",
@@ -2471,7 +2909,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 48
+    "priceLevelPct": 48,
+    "lat": 59.31516,
+    "lng": 18.08175
   },
   {
     "id": "8763",
@@ -2482,7 +2922,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-6113056",
     "email": "stureplan@oralcare.se",
     "website": "https://www.minmun.se",
-    "priceLevelPct": 46
+    "priceLevelPct": 46,
+    "lat": 59.33424,
+    "lng": 18.07486
   },
   {
     "id": "1657",
@@ -2493,7 +2935,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.34654,
+    "lng": 18.06519
   },
   {
     "id": "9517",
@@ -2504,7 +2948,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 34
+    "priceLevelPct": 34,
+    "lat": 59.34232,
+    "lng": 18.0493
   },
   {
     "id": "8794",
@@ -2515,7 +2961,9 @@ export const clinics: RealClinic[] = [
     "phone": "0855698556",
     "email": "olivia.panagiotou@outlook.com",
     "website": null,
-    "priceLevelPct": -7
+    "priceLevelPct": -7,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "1729",
@@ -2526,7 +2974,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 36 68 80, 070 - 441 44 57",
     "email": null,
     "website": null,
-    "priceLevelPct": -4
+    "priceLevelPct": -4,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "6206",
@@ -2537,7 +2987,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 02 01",
     "email": "narva@oralcare.se",
     "website": "https://www.oralcare.se",
-    "priceLevelPct": 51
+    "priceLevelPct": 51,
+    "lat": 59.33496,
+    "lng": 18.09207
   },
   {
     "id": "1239",
@@ -2548,7 +3000,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 94 11",
     "email": null,
     "website": null,
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.33496,
+    "lng": 18.09207
   },
   {
     "id": "1594",
@@ -2559,7 +3013,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 47
+    "priceLevelPct": 47,
+    "lat": 59.34205,
+    "lng": 18.04819
   },
   {
     "id": "4704",
@@ -2570,7 +3026,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 653 00 50",
     "email": "vastermalm@oralcare.se",
     "website": "https://www.oralcare.se",
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.33537,
+    "lng": 18.03513
   },
   {
     "id": "10066",
@@ -2581,7 +3039,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "8548",
@@ -2592,7 +3052,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.33724,
+    "lng": 18.08221
   },
   {
     "id": "10221",
@@ -2603,7 +3065,9 @@ export const clinics: RealClinic[] = [
     "phone": "084111107",
     "email": "info@natalija.se",
     "website": "https://www.natalija.se",
-    "priceLevelPct": -4
+    "priceLevelPct": -4,
+    "lat": 59.33424,
+    "lng": 18.07486
   },
   {
     "id": "1324",
@@ -2614,7 +3078,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-411-11-07",
     "email": "info@natalija.se",
     "website": "https://natalija.se/",
-    "priceLevelPct": -3
+    "priceLevelPct": -3,
+    "lat": 59.33424,
+    "lng": 18.07486
   },
   {
     "id": "9840",
@@ -2625,7 +3091,9 @@ export const clinics: RealClinic[] = [
     "phone": "0700733012",
     "email": "tomas@tandhalsanvast.se",
     "website": "https://www.tandhalsanvast.se",
-    "priceLevelPct": 3
+    "priceLevelPct": 3,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "1013",
@@ -2636,7 +3104,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 760 60 03",
     "email": "kontakt@piktandhalsa.se",
     "website": "https://www.piktandhalsa.se",
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.36357,
+    "lng": 17.8711
   },
   {
     "id": "9245",
@@ -2647,7 +3117,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-54587500",
     "email": "dinatandlakare@ptj.se",
     "website": "https://www.ptj.se/dinatandlakare",
-    "priceLevelPct": 41
+    "priceLevelPct": 41,
+    "lat": 59.34607,
+    "lng": 18.09484
   },
   {
     "id": "6581",
@@ -2658,7 +3130,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.34888,
+    "lng": 18.05773
   },
   {
     "id": "1705",
@@ -2669,7 +3143,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 47
+    "priceLevelPct": 47,
+    "lat": 59.34056,
+    "lng": 18.07843
   },
   {
     "id": "1003",
@@ -2680,7 +3156,9 @@ export const clinics: RealClinic[] = [
     "phone": "070 - 789 25 66",
     "email": "info@ramstenkliniken.se",
     "website": "https://www.ramstenkliniken.se",
-    "priceLevelPct": 22
+    "priceLevelPct": 22,
+    "lat": 59.31686,
+    "lng": 18.07418
   },
   {
     "id": "2073",
@@ -2691,7 +3169,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 91 22 18",
     "email": "info@gullmarskliniken.se",
     "website": null,
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.2985,
+    "lng": 18.07703
   },
   {
     "id": "7663",
@@ -2702,7 +3182,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 46
+    "priceLevelPct": 46,
+    "lat": 59.31769,
+    "lng": 18.02412
   },
   {
     "id": "6152",
@@ -2713,7 +3195,9 @@ export const clinics: RealClinic[] = [
     "phone": "070 - 710 38 84",
     "email": "eva.renasmilet@gmail.com",
     "website": null,
-    "priceLevelPct": -5
+    "priceLevelPct": -5,
+    "lat": 59.34009,
+    "lng": 18.08438
   },
   {
     "id": "3393",
@@ -2724,7 +3208,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 23
+    "priceLevelPct": 23,
+    "lat": 59.33564,
+    "lng": 18.06447
   },
   {
     "id": "1784",
@@ -2735,7 +3221,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 24 93",
     "email": "info@ritzdental.se",
     "website": "https://www.ritzdental.se",
-    "priceLevelPct": 30
+    "priceLevelPct": 30,
+    "lat": 59.33873,
+    "lng": 18.06867
   },
   {
     "id": "1275",
@@ -2746,7 +3234,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 20 98 32",
     "email": null,
     "website": "https://www.Rosendahl-Dental.se",
-    "priceLevelPct": 46
+    "priceLevelPct": 46,
+    "lat": 59.33919,
+    "lng": 18.05966
   },
   {
     "id": "9890",
@@ -2757,7 +3247,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.30574,
+    "lng": 17.99319
   },
   {
     "id": "6525",
@@ -2768,7 +3260,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 8
+    "priceLevelPct": 8,
+    "lat": 59.29582,
+    "lng": 18.10181
   },
   {
     "id": "2539",
@@ -2779,7 +3273,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -6
+    "priceLevelPct": -6,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "1915",
@@ -2790,7 +3286,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 6
+    "priceLevelPct": 6,
+    "lat": 59.35574,
+    "lng": 17.88282
   },
   {
     "id": "1190",
@@ -2801,7 +3299,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 57
+    "priceLevelPct": 57,
+    "lat": 59.32965,
+    "lng": 18.0437
   },
   {
     "id": "6193",
@@ -2812,7 +3312,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -3
+    "priceLevelPct": -3,
+    "lat": 59.26803,
+    "lng": 18.05107
   },
   {
     "id": "5007",
@@ -2823,7 +3325,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 31 77 25",
     "email": "draculadental@gmail.com",
     "website": "https://www.steriksplanstandhalsa.se",
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.33993,
+    "lng": 18.03843
   },
   {
     "id": "9102",
@@ -2834,7 +3338,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 3
+    "priceLevelPct": 3,
+    "lat": 59.28224,
+    "lng": 18.00207
   },
   {
     "id": "2130",
@@ -2845,7 +3351,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 653 92 30",
     "email": "sterikstandlakare37b@gmail.com",
     "website": null,
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.33357,
+    "lng": 18.03172
   },
   {
     "id": "7665",
@@ -2856,7 +3364,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.2928,
+    "lng": 17.96783
   },
   {
     "id": "2010",
@@ -2867,7 +3377,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -2
+    "priceLevelPct": -2,
+    "lat": 59.24505,
+    "lng": 18.0987
   },
   {
     "id": "2696",
@@ -2878,7 +3390,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "shirin.tavanaa@gmail.com",
     "website": null,
-    "priceLevelPct": 22
+    "priceLevelPct": 22,
+    "lat": 59.34197,
+    "lng": 18.04787
   },
   {
     "id": "3419",
@@ -2889,7 +3403,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 28 19",
     "email": null,
     "website": null,
-    "priceLevelPct": 30
+    "priceLevelPct": 30,
+    "lat": 59.3364,
+    "lng": 18.08001
   },
   {
     "id": "1831",
@@ -2900,7 +3416,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 24
+    "priceLevelPct": 24,
+    "lat": 59.34197,
+    "lng": 18.04787
   },
   {
     "id": "9897",
@@ -2911,7 +3429,9 @@ export const clinics: RealClinic[] = [
     "phone": "0707760685",
     "email": "dr_vahid@hotmail.com",
     "website": "https://www.skanstulltandvard.se",
-    "priceLevelPct": -2
+    "priceLevelPct": -2,
+    "lat": 59.30748,
+    "lng": 18.07697
   },
   {
     "id": "1563",
@@ -2922,7 +3442,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -3
+    "priceLevelPct": -3,
+    "lat": 59.30791,
+    "lng": 18.07941
   },
   {
     "id": "1680",
@@ -2933,7 +3455,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.31247,
+    "lng": 18.08048
   },
   {
     "id": "2310",
@@ -2944,7 +3468,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 15
+    "priceLevelPct": 15,
+    "lat": 59.27985,
+    "lng": 17.90685
   },
   {
     "id": "1966",
@@ -2955,7 +3481,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 710 16 30, 076 - 710 95 70",
     "email": "rafahnoori@hotmail.com",
     "website": "https://www.tandakut.se",
-    "priceLevelPct": -7
+    "priceLevelPct": -7,
+    "lat": 59.27526,
+    "lng": 17.90795
   },
   {
     "id": "9341",
@@ -2966,7 +3494,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-25 50 80",
     "email": "brommatandlakarna@smile.se",
     "website": "https://www.smile.se",
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.33331,
+    "lng": 17.92445
   },
   {
     "id": "5000",
@@ -2977,7 +3507,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 32 26 40",
     "email": "stockholmhagastaden@smile.se",
     "website": "https://www.smile.se/tandlakare-stockholm/",
-    "priceLevelPct": 47
+    "priceLevelPct": 47,
+    "lat": 59.34641,
+    "lng": 18.03866
   },
   {
     "id": "9949",
@@ -2988,7 +3520,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 36
+    "priceLevelPct": 36,
+    "lat": 59.3587,
+    "lng": 17.83523
   },
   {
     "id": "8415",
@@ -2999,7 +3533,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-26 16 30",
     "email": "kungshustandlakarna@smile.se",
     "website": "https://www.smile.se",
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.33609,
+    "lng": 18.068
   },
   {
     "id": "8252",
@@ -3010,7 +3546,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 26
+    "priceLevelPct": 26,
+    "lat": 59.35452,
+    "lng": 17.88296
   },
   {
     "id": "8580",
@@ -3021,7 +3559,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.29434,
+    "lng": 18.08558
   },
   {
     "id": "8023",
@@ -3032,7 +3572,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "4480",
@@ -3043,7 +3585,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 783 78 85",
     "email": "stockholmsdic@smile.se",
     "website": "https://www.smile.se/tandlakare-stockholm/",
-    "priceLevelPct": 48
+    "priceLevelPct": 48,
+    "lat": 59.33483,
+    "lng": 18.08566
   },
   {
     "id": "8238",
@@ -3054,7 +3598,9 @@ export const clinics: RealClinic[] = [
     "phone": "08- 640 0051",
     "email": "info@sofiatandlakarna.se",
     "website": "https://www.sofiatandlakarna.se",
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.31544,
+    "lng": 18.08525
   },
   {
     "id": "8174",
@@ -3065,7 +3611,9 @@ export const clinics: RealClinic[] = [
     "phone": "08- 640 0051",
     "email": "info@sofiatandlakarna.se",
     "website": "https://www.sofiatandlakarna.se",
-    "priceLevelPct": -1
+    "priceLevelPct": -1,
+    "lat": 59.31544,
+    "lng": 18.08525
   },
   {
     "id": "8227",
@@ -3076,7 +3624,9 @@ export const clinics: RealClinic[] = [
     "phone": "08- 640 0051",
     "email": "info@sofiatandlakarna.se",
     "website": "https://www.sofiatandlakarna.se",
-    "priceLevelPct": 15
+    "priceLevelPct": 15,
+    "lat": 59.31544,
+    "lng": 18.08525
   },
   {
     "id": "7984",
@@ -3087,7 +3637,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 64
+    "priceLevelPct": 64,
+    "lat": 59.33581,
+    "lng": 18.02055
   },
   {
     "id": "1853",
@@ -3098,7 +3650,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 32 60 80",
     "email": "info@specialtandvard.com",
     "website": "https://www.specialtandvard.com",
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.34522,
+    "lng": 18.05408
   },
   {
     "id": "4970",
@@ -3109,7 +3663,9 @@ export const clinics: RealClinic[] = [
     "phone": "076 - 108 38 10",
     "email": null,
     "website": null,
-    "priceLevelPct": -18
+    "priceLevelPct": -18,
+    "lat": 59.34522,
+    "lng": 18.05408
   },
   {
     "id": "5017",
@@ -3120,7 +3676,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -1
+    "priceLevelPct": -1,
+    "lat": 59.27703,
+    "lng": 17.90624
   },
   {
     "id": "9717",
@@ -3131,7 +3689,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 20
+    "priceLevelPct": 20,
+    "lat": 59.31815,
+    "lng": 18.04974
   },
   {
     "id": "6468",
@@ -3142,7 +3702,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 46
+    "priceLevelPct": 46,
+    "lat": 59.33367,
+    "lng": 18.05565
   },
   {
     "id": "10082",
@@ -3153,7 +3715,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 49
+    "priceLevelPct": 49,
+    "lat": 59.34171,
+    "lng": 18.05802
   },
   {
     "id": "7708",
@@ -3164,7 +3728,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 32 05 30",
     "email": "receptionen@stockholmtr.se",
     "website": "https://www.stockholmtr.se",
-    "priceLevelPct": 75
+    "priceLevelPct": 75,
+    "lat": 59.33989,
+    "lng": 18.0591
   },
   {
     "id": "1679",
@@ -3175,7 +3741,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 650 00 41",
     "email": "info@specialisttandvard.com",
     "website": "https://www.stockholmsspecialisttandvard.com",
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.32899,
+    "lng": 18.04712
   },
   {
     "id": "1990",
@@ -3186,7 +3754,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 16 62 00",
     "email": "evaneumuller@gmail.com",
     "website": "https://www.stockholmstandlakarklinik.se",
-    "priceLevelPct": 15
+    "priceLevelPct": 15,
+    "lat": 59.34722,
+    "lng": 18.06544
   },
   {
     "id": "2384",
@@ -3197,7 +3767,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -6
+    "priceLevelPct": -6,
+    "lat": 59.33778,
+    "lng": 18.07438
   },
   {
     "id": "1785",
@@ -3208,7 +3780,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 41
+    "priceLevelPct": 41,
+    "lat": 59.33626,
+    "lng": 18.07319
   },
   {
     "id": "3414",
@@ -3219,7 +3793,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "sturetandläkarna@ptj.se",
     "website": "https://www.ptj.se/sturetandlakarna/",
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.33965,
+    "lng": 18.07588
   },
   {
     "id": "3444",
@@ -3230,7 +3806,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 648 18 53",
     "email": "info.mellstrand@ptj.se",
     "website": "http://www.tandlakaremellstrand.se/",
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.28383,
+    "lng": 18.07335
   },
   {
     "id": "1333",
@@ -3241,7 +3819,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 32 08 20",
     "email": "office@sveatandklinik.se",
     "website": "https://www.sveatandklinik.se",
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.34535,
+    "lng": 18.05312
   },
   {
     "id": "2284",
@@ -3252,7 +3832,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.33919,
+    "lng": 18.05966
   },
   {
     "id": "1587",
@@ -3263,7 +3845,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 651 36 20",
     "email": "reception@swedishdental.com",
     "website": "https://www.swedishdental.com",
-    "priceLevelPct": 53
+    "priceLevelPct": 53,
+    "lat": 59.32787,
+    "lng": 18.04294
   },
   {
     "id": "1420",
@@ -3274,7 +3858,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 5
+    "priceLevelPct": 5,
+    "lat": 59.34329,
+    "lng": 18.05774
   },
   {
     "id": "2405",
@@ -3285,7 +3871,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 669 92 99",
     "email": "info@systrarnapdental.se",
     "website": "https://www.systrarnapdental.se",
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.33451,
+    "lng": 18.07735
   },
   {
     "id": "9094",
@@ -3296,7 +3884,9 @@ export const clinics: RealClinic[] = [
     "phone": "070 018 18 11",
     "email": "info@satratandkliniken.se",
     "website": "https://www.satratandkliniken.se/",
-    "priceLevelPct": 2
+    "priceLevelPct": 2,
+    "lat": 59.28242,
+    "lng": 17.91613
   },
   {
     "id": "8011",
@@ -3307,7 +3897,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.31607,
+    "lng": 18.07458
   },
   {
     "id": "6580",
@@ -3318,7 +3910,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -16
+    "priceLevelPct": -16,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "9943",
@@ -3329,7 +3923,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.31702,
+    "lng": 18.07534
   },
   {
     "id": "10064",
@@ -3340,7 +3936,9 @@ export const clinics: RealClinic[] = [
     "phone": "084421160",
     "email": "info@sodertandlakarna.se",
     "website": "https://södertandläkarna.se",
-    "priceLevelPct": 47
+    "priceLevelPct": 47,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "10063",
@@ -3351,7 +3949,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "10062",
@@ -3362,7 +3962,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 41
+    "priceLevelPct": 41,
+    "lat": 59.31408,
+    "lng": 18.06946
   },
   {
     "id": "4717",
@@ -3373,7 +3975,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 442 11 60",
     "email": "info@sodertandlakarna.se",
     "website": "http://www.sodertandlakarna.se/",
-    "priceLevelPct": 39
+    "priceLevelPct": 39,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "4716",
@@ -3384,7 +3988,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 442 11 60",
     "email": "info@sodertandlakarna.se",
     "website": "http://www.sodertandlakarna.se/",
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.31445,
+    "lng": 18.07446
   },
   {
     "id": "8715",
@@ -3395,7 +4001,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 442 11 60",
     "email": "info@sodertandlakarna.se",
     "website": "http://www.sodertandlakarna.se/",
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.31408,
+    "lng": 18.06946
   },
   {
     "id": "1950",
@@ -3406,7 +4014,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 122 120 00",
     "email": "info@tandcentralen.se",
     "website": "https://www.tandcentralen.se",
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.40951,
+    "lng": 17.9262
   },
   {
     "id": "4989",
@@ -3417,7 +4027,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 122 120 00",
     "email": "info@tandcentralen.se",
     "website": "https://www.tandcentralen.se",
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "2190",
@@ -3428,7 +4040,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 661 62 34",
     "email": "ostermalm@tandclinic.se",
     "website": "https://www.tandclinic.se",
-    "priceLevelPct": 26
+    "priceLevelPct": 26,
+    "lat": 59.34259,
+    "lng": 18.08793
   },
   {
     "id": "6161",
@@ -3439,7 +4053,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -17
+    "priceLevelPct": -17,
+    "lat": 59.33627,
+    "lng": 18.08449
   },
   {
     "id": "1783",
@@ -3450,7 +4066,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 506 621 01",
     "email": "skarholmen@tandea.se",
     "website": "https://www.tandea.se",
-    "priceLevelPct": 24
+    "priceLevelPct": 24,
+    "lat": 59.27526,
+    "lng": 17.90795
   },
   {
     "id": "8551",
@@ -3461,7 +4079,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 20
+    "priceLevelPct": 20,
+    "lat": 59.35475,
+    "lng": 18.10196
   },
   {
     "id": "8554",
@@ -3472,7 +4092,9 @@ export const clinics: RealClinic[] = [
     "phone": "0812139531",
     "email": "sjostaden@tandea.se",
     "website": "https://www.tandea.se",
-    "priceLevelPct": 25
+    "priceLevelPct": 25,
+    "lat": 59.30204,
+    "lng": 18.09483
   },
   {
     "id": "8546",
@@ -3483,7 +4105,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-5062105",
     "email": "sodermalm@tandea.se",
     "website": "https://www.tandea.se/kliniker/sodermalm/",
-    "priceLevelPct": 26
+    "priceLevelPct": 26,
+    "lat": 59.31483,
+    "lng": 18.05959
   },
   {
     "id": "2148",
@@ -3494,7 +4118,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 42
+    "priceLevelPct": 42,
+    "lat": 59.34067,
+    "lng": 18.0645
   },
   {
     "id": "2153",
@@ -3505,7 +4131,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 68 61",
     "email": "info@tandettan.se",
     "website": "https://www.tandettan.se",
-    "priceLevelPct": 6
+    "priceLevelPct": 6,
+    "lat": 59.33985,
+    "lng": 18.07604
   },
   {
     "id": "10073",
@@ -3516,7 +4144,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.33985,
+    "lng": 18.07604
   },
   {
     "id": "9316",
@@ -3527,7 +4157,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -20
+    "priceLevelPct": -20,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "1272",
@@ -3538,7 +4170,9 @@ export const clinics: RealClinic[] = [
     "phone": "070 - 543 65 77",
     "email": "Karl.agneta@telia.com",
     "website": "https://www.tandlakareannalundgren.se",
-    "priceLevelPct": -6
+    "priceLevelPct": -6,
+    "lat": 59.33248,
+    "lng": 18.08063
   },
   {
     "id": "6293",
@@ -3549,7 +4183,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -22
+    "priceLevelPct": -22,
+    "lat": 59.30537,
+    "lng": 17.99189
   },
   {
     "id": "2009",
@@ -3560,7 +4196,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -17
+    "priceLevelPct": -17,
+    "lat": 59.34009,
+    "lng": 18.08438
   },
   {
     "id": "6585",
@@ -3571,7 +4209,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -17
+    "priceLevelPct": -17,
+    "lat": 59.33647,
+    "lng": 18.08268
   },
   {
     "id": "2113",
@@ -3582,7 +4222,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "Benitatandhygienist@gmail.com",
     "website": null,
-    "priceLevelPct": 3
+    "priceLevelPct": 3,
+    "lat": 59.33919,
+    "lng": 18.05966
   },
   {
     "id": "6159",
@@ -3593,7 +4235,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -16
+    "priceLevelPct": -16,
+    "lat": 59.31788,
+    "lng": 18.05358
   },
   {
     "id": "1951",
@@ -3604,7 +4248,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "carina.malmsten@hotmail.se",
     "website": null,
-    "priceLevelPct": -19
+    "priceLevelPct": -19,
+    "lat": 59.33985,
+    "lng": 18.07604
   },
   {
     "id": "5010",
@@ -3615,7 +4261,9 @@ export const clinics: RealClinic[] = [
     "phone": "070 - 772 17 96",
     "email": "catharinahackzell@gmail.com",
     "website": null,
-    "priceLevelPct": -10
+    "priceLevelPct": -10,
+    "lat": 59.3358,
+    "lng": 18.07244
   },
   {
     "id": "9872",
@@ -3626,7 +4274,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -15
+    "priceLevelPct": -15,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "2585",
@@ -3637,7 +4287,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 2
+    "priceLevelPct": 2,
+    "lat": 59.30574,
+    "lng": 17.99319
   },
   {
     "id": "2661",
@@ -3648,7 +4300,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -13
+    "priceLevelPct": -13,
+    "lat": 59.34009,
+    "lng": 18.08438
   },
   {
     "id": "1364",
@@ -3659,7 +4313,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 21 33 91",
     "email": "eva.flodstrom@telia.com",
     "website": null,
-    "priceLevelPct": -8
+    "priceLevelPct": -8,
+    "lat": 59.33571,
+    "lng": 18.07543
   },
   {
     "id": "9326",
@@ -3670,7 +4326,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -13
+    "priceLevelPct": -13,
+    "lat": 59.30767,
+    "lng": 18.07146
   },
   {
     "id": "4963",
@@ -3681,7 +4339,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 97 12",
     "email": "helena.riahi@gmail.com",
     "website": "https://www.tandhygienist-helena.se",
-    "priceLevelPct": -9
+    "priceLevelPct": -9,
+    "lat": 59.34056,
+    "lng": 18.07843
   },
   {
     "id": "2535",
@@ -3692,7 +4352,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 20 08 44",
     "email": "info@tandhygienisten.se",
     "website": "https://www.tandhygienisten.se",
-    "priceLevelPct": -22
+    "priceLevelPct": -22,
+    "lat": 59.33316,
+    "lng": 18.06512
   },
   {
     "id": "8805",
@@ -3703,7 +4365,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -7
+    "priceLevelPct": -7,
+    "lat": 59.2833,
+    "lng": 18.04228
   },
   {
     "id": "9873",
@@ -3714,7 +4378,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -9
+    "priceLevelPct": -9,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "1812",
@@ -3725,7 +4391,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -17
+    "priceLevelPct": -17,
+    "lat": 59.33993,
+    "lng": 18.03843
   },
   {
     "id": "2666",
@@ -3736,7 +4404,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 24 95 95",
     "email": "Kerstin@kerstinkleist.se",
     "website": "https://www.kerstinkleist.se",
-    "priceLevelPct": -21
+    "priceLevelPct": -21,
+    "lat": 59.3371,
+    "lng": 18.06173
   },
   {
     "id": "4967",
@@ -3747,7 +4417,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -17
+    "priceLevelPct": -17,
+    "lat": 59.30821,
+    "lng": 18.07825
   },
   {
     "id": "1988",
@@ -3758,7 +4430,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 711 93 17",
     "email": "info@dentalhygienisten.se",
     "website": "https://www.dentalhygienisten.se",
-    "priceLevelPct": -22
+    "priceLevelPct": -22,
+    "lat": 59.34676,
+    "lng": 18.0594
   },
   {
     "id": "1419",
@@ -3769,7 +4443,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 678 80 15",
     "email": "maria.sjostedt@engelbrektsplan.se",
     "website": "https://www.engelbrektsplan.se",
-    "priceLevelPct": -10
+    "priceLevelPct": -10,
+    "lat": 59.33764,
+    "lng": 18.07052
   },
   {
     "id": "2722",
@@ -3780,7 +4456,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 591 136 00",
     "email": "marie@frisktandvard.com",
     "website": "https://www.friskatanden.se",
-    "priceLevelPct": -13
+    "priceLevelPct": -13,
+    "lat": 59.33571,
+    "lng": 18.08721
   },
   {
     "id": "2700",
@@ -3791,7 +4469,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.34197,
+    "lng": 18.04787
   },
   {
     "id": "8808",
@@ -3802,7 +4482,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -13
+    "priceLevelPct": -13,
+    "lat": 59.36179,
+    "lng": 17.87176
   },
   {
     "id": "1758",
@@ -3813,7 +4495,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 796 90 16",
     "email": "sanella@rentand.se",
     "website": "https://www.rentand.se",
-    "priceLevelPct": -22
+    "priceLevelPct": -22,
+    "lat": 59.31686,
+    "lng": 18.07418
   },
   {
     "id": "2440",
@@ -3824,7 +4508,9 @@ export const clinics: RealClinic[] = [
     "phone": "070 - 740 06 02",
     "email": "sara.karimikhoob@gmail.com",
     "website": null,
-    "priceLevelPct": 1
+    "priceLevelPct": 1,
+    "lat": 59.33265,
+    "lng": 18.04561
   },
   {
     "id": "9896",
@@ -3835,7 +4521,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": null
+    "priceLevelPct": null,
+    "lat": 59.33873,
+    "lng": 18.06867
   },
   {
     "id": "1959",
@@ -3846,7 +4534,9 @@ export const clinics: RealClinic[] = [
     "phone": "073 - 941 45 09",
     "email": "info@ulrikamelin.se",
     "website": "https://www.ulrikamelin.se",
-    "priceLevelPct": -15
+    "priceLevelPct": -15,
+    "lat": 59.33795,
+    "lng": 18.07452
   },
   {
     "id": "2329",
@@ -3857,7 +4547,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.31247,
+    "lng": 18.08048
   },
   {
     "id": "8803",
@@ -3868,7 +4560,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.26461,
+    "lng": 18.14312
   },
   {
     "id": "2108",
@@ -3879,7 +4573,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.33573,
+    "lng": 18.03333
   },
   {
     "id": "6294",
@@ -3890,7 +4586,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 16
+    "priceLevelPct": 16,
+    "lat": 59.3625,
+    "lng": 17.83224
   },
   {
     "id": "2379",
@@ -3901,7 +4599,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 20 56 51",
     "email": "tandklinik@veneer.se",
     "website": "http://www.veneer.se/",
-    "priceLevelPct": 28
+    "priceLevelPct": 28,
+    "lat": 59.3389,
+    "lng": 18.06067
   },
   {
     "id": "1906",
@@ -3912,7 +4612,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 34
+    "priceLevelPct": 34,
+    "lat": 59.33494,
+    "lng": 18.07179
   },
   {
     "id": "4877",
@@ -3923,7 +4625,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -7
+    "priceLevelPct": -7,
+    "lat": 59.27552,
+    "lng": 17.88989
   },
   {
     "id": "9248",
@@ -3934,7 +4638,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "2640",
@@ -3945,7 +4651,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.33494,
+    "lng": 18.07179
   },
   {
     "id": "2559",
@@ -3956,7 +4664,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 679 77 23",
     "email": "nina@alavi.se",
     "website": null,
-    "priceLevelPct": -6
+    "priceLevelPct": -6,
+    "lat": 59.33078,
+    "lng": 18.07744
   },
   {
     "id": "1460",
@@ -3967,7 +4677,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 652 11 52",
     "email": "info@tandlakarehansson.se",
     "website": "https://www.tandlakarehansson.se",
-    "priceLevelPct": 28
+    "priceLevelPct": 28,
+    "lat": 59.3323,
+    "lng": 18.02981
   },
   {
     "id": "2698",
@@ -3978,7 +4690,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.36651,
+    "lng": 17.84412
   },
   {
     "id": "9528",
@@ -3989,7 +4703,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.33818,
+    "lng": 18.05703
   },
   {
     "id": "3415",
@@ -4000,7 +4716,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 651 03 03",
     "email": "bjorn.eriksson@ptj.se",
     "website": "https://www.scheelekliniken.se",
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.33994,
+    "lng": 18.07611
   },
   {
     "id": "1880",
@@ -4011,7 +4729,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 10 15",
     "email": "info@tandlakarebritteurenius.se",
     "website": "https://www.tandlakarebritteurenius.se",
-    "priceLevelPct": 46
+    "priceLevelPct": 46,
+    "lat": 59.33764,
+    "lng": 18.07052
   },
   {
     "id": "1648",
@@ -4022,7 +4742,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 32 08 85",
     "email": "info@tandlakaresilber.se",
     "website": "https://www.tandlakaresilber.se",
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.34252,
+    "lng": 18.0512
   },
   {
     "id": "1256",
@@ -4033,7 +4755,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "tandlakare.cecilia@tele2.se",
     "website": null,
-    "priceLevelPct": 36
+    "priceLevelPct": 36,
+    "lat": 59.33591,
+    "lng": 18.05929
   },
   {
     "id": "1432",
@@ -4044,7 +4768,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 648 66 22",
     "email": "claesgoran@tandlakareclaessonab.se",
     "website": null,
-    "priceLevelPct": -6
+    "priceLevelPct": -6,
+    "lat": 59.29582,
+    "lng": 18.10181
   },
   {
     "id": "6162",
@@ -4055,7 +4781,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 23
+    "priceLevelPct": 23,
+    "lat": 59.34234,
+    "lng": 18.05863
   },
   {
     "id": "1974",
@@ -4066,7 +4794,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 59
+    "priceLevelPct": 59,
+    "lat": 59.34197,
+    "lng": 18.04787
   },
   {
     "id": "1845",
@@ -4077,7 +4807,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 26 41 40",
     "email": null,
     "website": null,
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.334,
+    "lng": 17.94958
   },
   {
     "id": "2611",
@@ -4088,7 +4820,9 @@ export const clinics: RealClinic[] = [
     "phone": "070 - 360 23 52",
     "email": "hassak@hotmail.com",
     "website": null,
-    "priceLevelPct": -7
+    "priceLevelPct": -7,
+    "lat": 59.33078,
+    "lng": 18.07744
   },
   {
     "id": "1177",
@@ -4099,7 +4833,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 08 73",
     "email": "helen.almstrom@telia.com",
     "website": "https://www.sturegalleriantandhalsa.se",
-    "priceLevelPct": 11
+    "priceLevelPct": 11,
+    "lat": 59.33571,
+    "lng": 18.07543
   },
   {
     "id": "1800",
@@ -4110,7 +4846,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 653 96 09",
     "email": "info@prettysmile.se",
     "website": "https://www.prettysmile.se",
-    "priceLevelPct": 38
+    "priceLevelPct": 38,
+    "lat": 59.33624,
+    "lng": 18.0342
   },
   {
     "id": "1682",
@@ -4121,7 +4859,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 640 91 91",
     "email": "info@ingridjerlin.se",
     "website": null,
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.31758,
+    "lng": 18.07472
   },
   {
     "id": "6582",
@@ -4132,7 +4872,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.33344,
+    "lng": 18.04025
   },
   {
     "id": "1803",
@@ -4143,7 +4885,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.33605,
+    "lng": 18.06723
   },
   {
     "id": "2213",
@@ -4154,7 +4898,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 22 23",
     "email": "info@jtingstam.se",
     "website": "https://www.jtingstam.se",
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.33378,
+    "lng": 18.07792
   },
   {
     "id": "4800",
@@ -4165,7 +4911,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 64 06",
     "email": null,
     "website": "https://www.framtand.se",
-    "priceLevelPct": 28
+    "priceLevelPct": 28,
+    "lat": 59.33263,
+    "lng": 18.08003
   },
   {
     "id": "4799",
@@ -4176,7 +4924,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 60 00",
     "email": null,
     "website": null,
-    "priceLevelPct": 28
+    "priceLevelPct": 28,
+    "lat": 59.33764,
+    "lng": 18.07052
   },
   {
     "id": "9520",
@@ -4187,7 +4937,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.29434,
+    "lng": 18.08558
   },
   {
     "id": "8406",
@@ -4198,7 +4950,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.33795,
+    "lng": 18.07452
   },
   {
     "id": "1795",
@@ -4209,7 +4963,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 80
+    "priceLevelPct": 80,
+    "lat": 59.33494,
+    "lng": 18.07179
   },
   {
     "id": "1019",
@@ -4220,7 +4976,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 11
+    "priceLevelPct": 11,
+    "lat": 59.325,
+    "lng": 18.07082
   },
   {
     "id": "1591",
@@ -4231,7 +4989,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.33451,
+    "lng": 18.07621
   },
   {
     "id": "1532",
@@ -4242,7 +5002,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 32
+    "priceLevelPct": 32,
+    "lat": 59.33494,
+    "lng": 18.07179
   },
   {
     "id": "1565",
@@ -4253,7 +5015,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 612 36 36",
     "email": "kerstin@luntand.com",
     "website": "https://www.luntand.com",
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.34234,
+    "lng": 18.05863
   },
   {
     "id": "1468",
@@ -4264,7 +5028,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 77 75, 073 - 600 15 90",
     "email": "kpalm2020@outlook.com",
     "website": "https://www.kerstinpalm.se",
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.33494,
+    "lng": 18.07179
   },
   {
     "id": "1987",
@@ -4275,7 +5041,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.31843,
+    "lng": 18.07127
   },
   {
     "id": "9526",
@@ -4286,7 +5054,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.34778,
+    "lng": 17.88313
   },
   {
     "id": "1318",
@@ -4297,7 +5067,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 23
+    "priceLevelPct": 23,
+    "lat": 59.33571,
+    "lng": 18.07543
   },
   {
     "id": "2616",
@@ -4308,7 +5080,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 1
+    "priceLevelPct": 1,
+    "lat": 59.33822,
+    "lng": 18.0358
   },
   {
     "id": "1093",
@@ -4319,7 +5093,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 11 08 , 070 - 586 58 83",
     "email": "dentist@louisemyren.se",
     "website": "https://www.louisemyren.se",
-    "priceLevelPct": 66
+    "priceLevelPct": 66,
+    "lat": 59.33506,
+    "lng": 18.07125
   },
   {
     "id": "1541",
@@ -4330,7 +5106,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 656 48 48",
     "email": "info@essingetdv.se",
     "website": "https://www.essingetdv.se",
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.32,
+    "lng": 17.9867
   },
   {
     "id": "1207",
@@ -4341,7 +5119,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 24
+    "priceLevelPct": 24,
+    "lat": 59.33739,
+    "lng": 18.08244
   },
   {
     "id": "3418",
@@ -4352,7 +5132,9 @@ export const clinics: RealClinic[] = [
     "phone": "08- 661 56 98",
     "email": "margareta.jambor.57@ptj.se",
     "website": "http://www.jambordental.se/",
-    "priceLevelPct": 27
+    "priceLevelPct": 27,
+    "lat": 59.33451,
+    "lng": 18.07735
   },
   {
     "id": "2439",
@@ -4363,7 +5145,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-6516615",
     "email": "info@mariedental.se",
     "website": "https://www.mariedental.se",
-    "priceLevelPct": 13
+    "priceLevelPct": 13,
+    "lat": 59.3365,
+    "lng": 18.0266
   },
   {
     "id": "2634",
@@ -4374,7 +5158,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 26 66 27",
     "email": "info@sundenta.se",
     "website": "https://www.sundenta.se",
-    "priceLevelPct": 3
+    "priceLevelPct": 3,
+    "lat": 59.33475,
+    "lng": 17.96308
   },
   {
     "id": "1770",
@@ -4385,7 +5171,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 650 80 90",
     "email": "info@mathiasdental.se",
     "website": "https://www.mathiasdental.se",
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.32912,
+    "lng": 18.04287
   },
   {
     "id": "1650",
@@ -4396,7 +5184,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.33767,
+    "lng": 18.06178
   },
   {
     "id": "3446",
@@ -4407,7 +5197,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 605 37 00",
     "email": "tandlakaremcknight@ptj.se",
     "website": "http://www.ptj.se/tandlakare-mcknight/",
-    "priceLevelPct": 20
+    "priceLevelPct": 20,
+    "lat": 59.24248,
+    "lng": 18.09027
   },
   {
     "id": "6243",
@@ -4418,7 +5210,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -4
+    "priceLevelPct": -4,
+    "lat": 59.33627,
+    "lng": 18.08449
   },
   {
     "id": "1297",
@@ -4429,7 +5223,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 604 08 74",
     "email": "tandvardskliniken.farsta@comhem.se",
     "website": "https://www.tandvardfarsta.se",
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.2431,
+    "lng": 18.09603
   },
   {
     "id": "1051",
@@ -4440,7 +5236,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 661 50 62",
     "email": null,
     "website": null,
-    "priceLevelPct": -7
+    "priceLevelPct": -7,
+    "lat": 59.33263,
+    "lng": 18.08003
   },
   {
     "id": "1136",
@@ -4451,7 +5249,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 18 01",
     "email": "tandlakare.werner@comhem.se",
     "website": "https://www.tandmicke.se",
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.34007,
+    "lng": 18.07621
   },
   {
     "id": "2187",
@@ -4462,7 +5262,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 09 48",
     "email": "mitra.brakenhielm@mijodent.se",
     "website": "https://www.mijodent.se",
-    "priceLevelPct": 49
+    "priceLevelPct": 49,
+    "lat": 59.3358,
+    "lng": 18.07244
   },
   {
     "id": "2062",
@@ -4473,7 +5275,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 656 01  01, 070 - 770 56 60",
     "email": "info@tandlakaremonafakir.se",
     "website": "https://www.tandlakaremonafakir.se",
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.32923,
+    "lng": 18.00376
   },
   {
     "id": "4855",
@@ -4484,7 +5288,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 641 90 69",
     "email": null,
     "website": null,
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": 59.31029,
+    "lng": 18.07498
   },
   {
     "id": "6167",
@@ -4495,7 +5301,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 32
+    "priceLevelPct": 32,
+    "lat": 59.33993,
+    "lng": 18.03843
   },
   {
     "id": "7778",
@@ -4506,7 +5314,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.3308,
+    "lng": 18.02476
   },
   {
     "id": "1235",
@@ -4517,7 +5327,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 25 80",
     "email": "info@linnetandlakarna.se",
     "website": "https://www.tandlakarethorne.se",
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.33627,
+    "lng": 18.08449
   },
   {
     "id": "8367",
@@ -4528,7 +5340,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 661 12 22",
     "email": "tandlakarepaolablanco@ptj.se",
     "website": null,
-    "priceLevelPct": 25
+    "priceLevelPct": 25,
+    "lat": 59.33578,
+    "lng": 18.0603
   },
   {
     "id": "1121",
@@ -4539,7 +5353,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.34056,
+    "lng": 18.03752
   },
   {
     "id": "2006",
@@ -4550,7 +5366,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 31 55 40",
     "email": null,
     "website": "https://www.helbro.se",
-    "priceLevelPct": 30
+    "priceLevelPct": 30,
+    "lat": 59.34251,
+    "lng": 18.04498
   },
   {
     "id": "1359",
@@ -4561,7 +5379,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 661 56 84",
     "email": "reception@philipalfort.se",
     "website": "https://www.philipalfort.se",
-    "priceLevelPct": 42
+    "priceLevelPct": 42,
+    "lat": 59.33795,
+    "lng": 18.07452
   },
   {
     "id": "2266",
@@ -4572,7 +5392,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 611 08 02",
     "email": "info@rejnfalk.se",
     "website": "https://www.rejnfalk.se",
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.33902,
+    "lng": 18.06837
   },
   {
     "id": "1310",
@@ -4583,7 +5405,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 641 70 50",
     "email": "rikard@vitabergstandlakaren.se",
     "website": "https://www.vitabergstandlakaren.se",
-    "priceLevelPct": -1
+    "priceLevelPct": -1,
+    "lat": 59.30989,
+    "lng": 18.08682
   },
   {
     "id": "3424",
@@ -4594,7 +5418,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 31 40 70",
     "email": "info.tandlakare.ansari@ptj.se",
     "website": "https://tandlakareansari.se/",
-    "priceLevelPct": 41
+    "priceLevelPct": 41,
+    "lat": 59.33851,
+    "lng": 18.08088
   },
   {
     "id": "2267",
@@ -4605,7 +5431,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 86 89 75",
     "email": "kontakt@tandlakareragsved.se",
     "website": null,
-    "priceLevelPct": -3
+    "priceLevelPct": -3,
+    "lat": 59.25709,
+    "lng": 18.02786
   },
   {
     "id": "1664",
@@ -4616,7 +5444,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 94 44 05",
     "email": "sofia@carlenhammar.se",
     "website": "https://www.carlenhammar.se",
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.25571,
+    "lng": 18.11449
   },
   {
     "id": "4690",
@@ -4627,7 +5457,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 791 86 11",
     "email": "tandlakare.graf@telia.com",
     "website": "http://www.tandlakarnagraf.se/",
-    "priceLevelPct": 45
+    "priceLevelPct": 45,
+    "lat": 59.33919,
+    "lng": 18.05966
   },
   {
     "id": "1168",
@@ -4638,7 +5470,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 23
+    "priceLevelPct": 23,
+    "lat": 59.34804,
+    "lng": 18.06062
   },
   {
     "id": "1440",
@@ -4649,7 +5483,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 49
+    "priceLevelPct": 49,
+    "lat": 59.33451,
+    "lng": 18.07621
   },
   {
     "id": "1208",
@@ -4660,7 +5496,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 8
+    "priceLevelPct": 8,
+    "lat": 59.31893,
+    "lng": 18.07431
   },
   {
     "id": "1360",
@@ -4671,7 +5509,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 661 56 84",
     "email": "Info@thommymalki.se",
     "website": "https://www.thommymalki.se",
-    "priceLevelPct": 36
+    "priceLevelPct": 36,
+    "lat": 59.33795,
+    "lng": 18.07452
   },
   {
     "id": "1118",
@@ -4682,7 +5522,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 28
+    "priceLevelPct": 28,
+    "lat": 59.34394,
+    "lng": 18.05468
   },
   {
     "id": "1010",
@@ -4693,7 +5535,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.33902,
+    "lng": 18.06837
   },
   {
     "id": "1828",
@@ -4704,7 +5548,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 22 51 17",
     "email": null,
     "website": null,
-    "priceLevelPct": 5
+    "priceLevelPct": 5,
+    "lat": 59.33494,
+    "lng": 18.07179
   },
   {
     "id": "2334",
@@ -4715,7 +5561,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.33739,
+    "lng": 18.08244
   },
   {
     "id": "1916",
@@ -4726,7 +5574,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 661 48 00",
     "email": "tandlakare.asa@telia.com",
     "website": "https://www.tandlakarewerner.se",
-    "priceLevelPct": 45
+    "priceLevelPct": 45,
+    "lat": 59.34022,
+    "lng": 18.08964
   },
   {
     "id": "6467",
@@ -4737,7 +5587,9 @@ export const clinics: RealClinic[] = [
     "phone": "08- 31 53 31",
     "email": "info@tandlakargruppenodenplan.se",
     "website": "https://tandlakargruppenodenplan.se/",
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.34291,
+    "lng": 18.04886
   },
   {
     "id": "1875",
@@ -4748,7 +5600,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 515 100 76",
     "email": "info@tandsjostaden.se",
     "website": "https://www.tandsjostaden.se",
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.3051,
+    "lng": 18.09052
   },
   {
     "id": "4869",
@@ -4759,7 +5613,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 642 03 50",
     "email": "info@tgsoder.se",
     "website": "https://www.tgsklinikerna.se",
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.31474,
+    "lng": 18.07853
   },
   {
     "id": "4868",
@@ -4770,7 +5626,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 51 55",
     "email": "info@tgsture.se",
     "website": "https://www.tgsklinikerna.se",
-    "priceLevelPct": 38
+    "priceLevelPct": 38,
+    "lat": 59.31695,
+    "lng": 18.05247
   },
   {
     "id": "1189",
@@ -4781,7 +5639,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 25 60 04",
     "email": null,
     "website": "https://www.tandlakarhusetbromma.se",
-    "priceLevelPct": 36
+    "priceLevelPct": 36,
+    "lat": 59.32869,
+    "lng": 17.97143
   },
   {
     "id": "8235",
@@ -4792,7 +5652,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 8
+    "priceLevelPct": 8,
+    "lat": 59.38102,
+    "lng": 17.89851
   },
   {
     "id": "2685",
@@ -4803,7 +5665,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 15 98 08",
     "email": null,
     "website": null,
-    "priceLevelPct": 28
+    "priceLevelPct": 28,
+    "lat": 59.36589,
+    "lng": 18.05394
   },
   {
     "id": "6137",
@@ -4814,7 +5678,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 649 50 70",
     "email": "info@bratandlakare.se",
     "website": "http://www.bratandlakare.se/",
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.29356,
+    "lng": 18.11292
   },
   {
     "id": "8407",
@@ -4825,7 +5691,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 48
+    "priceLevelPct": 48,
+    "lat": 59.33568,
+    "lng": 18.07903
   },
   {
     "id": "1965",
@@ -4836,7 +5704,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 612 56 51",
     "email": "tdl.mariamoricz@tele2.se",
     "website": null,
-    "priceLevelPct": 12
+    "priceLevelPct": 12,
+    "lat": 59.33851,
+    "lng": 18.08088
   },
   {
     "id": "2283",
@@ -4847,7 +5717,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 10
+    "priceLevelPct": 10,
+    "lat": 59.33515,
+    "lng": 17.96872
   },
   {
     "id": "1610",
@@ -4858,7 +5730,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.34329,
+    "lng": 18.05774
   },
   {
     "id": "5030",
@@ -4869,7 +5743,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 93 93 25",
     "email": "info@tandvision.se",
     "website": null,
-    "priceLevelPct": 26
+    "priceLevelPct": 26,
+    "lat": 59.26559,
+    "lng": 18.13535
   },
   {
     "id": "9519",
@@ -4880,7 +5756,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -4
+    "priceLevelPct": -4,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "6357",
@@ -4891,7 +5769,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -2
+    "priceLevelPct": -2,
+    "lat": 59.36219,
+    "lng": 17.8726
   },
   {
     "id": "3395",
@@ -4902,7 +5782,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 409 040 60",
     "email": "info.tandvardensergel@ptj.se",
     "website": "https://www.tandvardensergel.se",
-    "priceLevelPct": 48
+    "priceLevelPct": 48,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "9898",
@@ -4913,7 +5795,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.34567,
+    "lng": 17.90338
   },
   {
     "id": "1331",
@@ -4924,7 +5808,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 648 24 62",
     "email": "tandl.cederquist@hotmail.com",
     "website": null,
-    "priceLevelPct": 7
+    "priceLevelPct": 7,
+    "lat": 59.2906,
+    "lng": 18.11067
   },
   {
     "id": "1677",
@@ -4935,7 +5821,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 669 42 06",
     "email": "info@tantokliniken.se",
     "website": "https://www.tantokliniken.se/",
-    "priceLevelPct": 24
+    "priceLevelPct": 24,
+    "lat": 59.31057,
+    "lng": 18.04899
   },
   {
     "id": "7656",
@@ -4946,7 +5834,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "8812",
@@ -4957,7 +5847,9 @@ export const clinics: RealClinic[] = [
     "phone": "086466681",
     "email": "info@tandlakarechristinagoransson.se",
     "website": null,
-    "priceLevelPct": 3
+    "priceLevelPct": 3,
+    "lat": 59.29515,
+    "lng": 17.93464
   },
   {
     "id": "3389",
@@ -4968,7 +5860,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 660 82 49",
     "email": "info@Teamhulten.se",
     "website": "https://www.Teamhulten.se",
-    "priceLevelPct": 43
+    "priceLevelPct": 43,
+    "lat": 59.33499,
+    "lng": 18.06091
   },
   {
     "id": "7841",
@@ -4979,7 +5873,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 10 99 01",
     "email": "info.tandlakare.ekdahl@telia.com",
     "website": "https://www.tegnertandlakarna.se",
-    "priceLevelPct": 22
+    "priceLevelPct": 22,
+    "lat": 59.34067,
+    "lng": 18.0645
   },
   {
     "id": "7844",
@@ -4990,7 +5886,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 411 52 64",
     "email": "tandlakare.mona@telia.com",
     "website": "https://www.tegnertandlakarna.se",
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.34067,
+    "lng": 18.0645
   },
   {
     "id": "1773",
@@ -5001,7 +5899,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 411 42 26",
     "email": "info@tessindental.se",
     "website": "https://www.tessindental.se",
-    "priceLevelPct": 38
+    "priceLevelPct": 38,
+    "lat": 59.34256,
+    "lng": 18.09292
   },
   {
     "id": "2370",
@@ -5012,7 +5912,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 40
+    "priceLevelPct": 40,
+    "lat": 59.33511,
+    "lng": 18.0614
   },
   {
     "id": "6570",
@@ -5023,7 +5925,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 36 30 11",
     "email": "info@torgkliniken.se",
     "website": "https://www.torgkliniken.se/",
-    "priceLevelPct": 17
+    "priceLevelPct": 17,
+    "lat": null,
+    "lng": null
   },
   {
     "id": "8371",
@@ -5034,7 +5938,9 @@ export const clinics: RealClinic[] = [
     "phone": "08107868",
     "email": "tornkliniken@ptj.se",
     "website": "https://www.ptj.se/tornkliniken",
-    "priceLevelPct": 29
+    "priceLevelPct": 29,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "4714",
@@ -5045,7 +5951,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 25 24 28",
     "email": "info@tandlakareradestad.se",
     "website": "https://www.tandlakareradestad.se",
-    "priceLevelPct": 53
+    "priceLevelPct": 53,
+    "lat": 59.33362,
+    "lng": 17.98633
   },
   {
     "id": "3495",
@@ -5056,7 +5964,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-89 11 15",
     "email": "info.tretandlakare@ptj.se",
     "website": "https://tretandlakare.se/",
-    "priceLevelPct": 44
+    "priceLevelPct": 44,
+    "lat": 59.37202,
+    "lng": 17.85942
   },
   {
     "id": "10227",
@@ -5067,7 +5977,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 37
+    "priceLevelPct": 37,
+    "lat": 59.40455,
+    "lng": 17.95055
   },
   {
     "id": "1382",
@@ -5078,7 +5990,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 642 89 24",
     "email": "info@visdomstanden.se",
     "website": "https://www.visdomstanden.se",
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.31764,
+    "lng": 18.07167
   },
   {
     "id": "2112",
@@ -5089,7 +6003,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 34 64 33",
     "email": "info@vallingbydental.se",
     "website": "https://www.vallingbydental.se",
-    "priceLevelPct": 13
+    "priceLevelPct": 13,
+    "lat": 59.36179,
+    "lng": 17.87176
   },
   {
     "id": "1745",
@@ -5100,7 +6016,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 87 44 50",
     "email": "info@vallingbytanhalsa.se",
     "website": "https://www.vallingbytandhalsa.se",
-    "priceLevelPct": 21
+    "priceLevelPct": 21,
+    "lat": 59.3627,
+    "lng": 17.87782
   },
   {
     "id": "2126",
@@ -5111,7 +6029,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "kontakt@vallingbytandvardscenter.se",
     "website": null,
-    "priceLevelPct": null
+    "priceLevelPct": null,
+    "lat": 59.36564,
+    "lng": 17.87147
   },
   {
     "id": "1685",
@@ -5122,7 +6042,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 21 01 85",
     "email": "info@wasatandklinik.se",
     "website": "https://www.wasatandklinik.se",
-    "priceLevelPct": 45
+    "priceLevelPct": 45,
+    "lat": 59.34038,
+    "lng": 18.06273
   },
   {
     "id": "9937",
@@ -5133,7 +6055,9 @@ export const clinics: RealClinic[] = [
     "phone": "0765550893",
     "email": "garcianteloxilomen@gmail.com",
     "website": null,
-    "priceLevelPct": 31
+    "priceLevelPct": 31,
+    "lat": 59.33828,
+    "lng": 18.07189
   },
   {
     "id": "1379",
@@ -5144,7 +6068,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": -4
+    "priceLevelPct": -4,
+    "lat": 59.33647,
+    "lng": 18.08268
   },
   {
     "id": "2398",
@@ -5155,7 +6081,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": "info@ydc.se",
     "website": null,
-    "priceLevelPct": 30
+    "priceLevelPct": 30,
+    "lat": 59.33378,
+    "lng": 18.07792
   },
   {
     "id": "6471",
@@ -5166,7 +6094,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 18
+    "priceLevelPct": 18,
+    "lat": 59.33624,
+    "lng": 18.0342
   },
   {
     "id": "8791",
@@ -5177,7 +6107,9 @@ export const clinics: RealClinic[] = [
     "phone": "0768508162",
     "email": "info@akermyntantandvard.se",
     "website": null,
-    "priceLevelPct": 19
+    "priceLevelPct": 19,
+    "lat": 59.38129,
+    "lng": 17.81785
   },
   {
     "id": "2342",
@@ -5188,7 +6120,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 128 545 55",
     "email": "boka@alvsjotandvard.se",
     "website": "https://www.alvsjotandvard.se/",
-    "priceLevelPct": 35
+    "priceLevelPct": 35,
+    "lat": 59.28031,
+    "lng": 18.01118
   },
   {
     "id": "2047",
@@ -5199,7 +6133,9 @@ export const clinics: RealClinic[] = [
     "phone": "08-874620",
     "email": "angbytandlakarna@ptj.se",
     "website": "https://www.ptj.se/angbytandlakarna",
-    "priceLevelPct": 9
+    "priceLevelPct": 9,
+    "lat": 59.34711,
+    "lng": 17.89476
   },
   {
     "id": "9223",
@@ -5210,7 +6146,9 @@ export const clinics: RealClinic[] = [
     "phone": "08250210",
     "email": "info@appelvikentandvard.se",
     "website": "https://appelvikentandvard.se",
-    "priceLevelPct": 28
+    "priceLevelPct": 28,
+    "lat": 59.32182,
+    "lng": 17.97385
   },
   {
     "id": "6385",
@@ -5221,7 +6159,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 6
+    "priceLevelPct": 6,
+    "lat": 59.2801,
+    "lng": 18.03368
   },
   {
     "id": "1157",
@@ -5232,7 +6172,9 @@ export const clinics: RealClinic[] = [
     "phone": "08 - 91 70 52",
     "email": "info@ostbergatandlakarna.se",
     "website": "https://www.ostbergatandlakarna.se",
-    "priceLevelPct": 33
+    "priceLevelPct": 33,
+    "lat": 59.2833,
+    "lng": 18.04228
   },
   {
     "id": "2255",
@@ -5243,7 +6185,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 8
+    "priceLevelPct": 8,
+    "lat": 59.34801,
+    "lng": 18.06361
   },
   {
     "id": "1309",
@@ -5254,7 +6198,9 @@ export const clinics: RealClinic[] = [
     "phone": null,
     "email": null,
     "website": null,
-    "priceLevelPct": 14
+    "priceLevelPct": 14,
+    "lat": 59.33641,
+    "lng": 18.07853
   }
 ];
 
