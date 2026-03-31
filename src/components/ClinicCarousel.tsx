@@ -1,10 +1,10 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { clinics as realClinics, type RealClinic } from "@/lib/clinic-data";
 
-/** Pick a diverse set of real clinics for the carousel */
 const CAROUSEL_CLINICS: RealClinic[] = realClinics
   .filter((c) => c.lat && c.lng && c.priceLevelPct !== null)
   .slice(0, 12);
@@ -23,20 +23,18 @@ function getPriceBadge(pct: number | null) {
   return { text: "Nära referens", cls: "bg-bg-sunken text-text-secondary" };
 }
 
-export function ClinicCarousel() {
-  const [isVisible, setIsVisible] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
+const statsContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+const statItem = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+};
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
-      { threshold: 0.2 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+export function ClinicCarousel() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -47,9 +45,15 @@ export function ClinicCarousel() {
   };
 
   return (
-    <section ref={sectionRef} id="clinics" className="py-24 px-6 bg-bg-base">
+    <section id="clinics" className="py-24 px-6 bg-bg-base">
       <div className="max-w-wide mx-auto">
-        <div className="flex items-center justify-between mb-12">
+        <motion.div
+          className="flex items-center justify-between mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <p className="text-xs font-semibold text-text-tertiary uppercase tracking-[0.12em]">
             Kliniker i nätverket
           </p>
@@ -59,46 +63,47 @@ export function ClinicCarousel() {
           >
             Se alla kliniker →
           </button>
-        </div>
+        </motion.div>
 
         {/* Stats grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {STATS.map((stat, i) => (
-            <div
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+          variants={statsContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {STATS.map((stat) => (
+            <motion.div
               key={stat.label}
+              variants={statItem}
               className="bg-bg-elevated border border-border rounded-lg p-6 text-center"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transition: "opacity 0.5s ease, transform 0.5s ease",
-                transitionDelay: `${i * 100}ms`,
-              }}
             >
               <div className="font-display text-2xl mb-1">{stat.value}</div>
               <div className="text-xs text-text-tertiary">{stat.label}</div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Carousel */}
-        <div className="relative">
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           <div
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
           >
-            {CAROUSEL_CLINICS.map((clinic, i) => {
+            {CAROUSEL_CLINICS.map((clinic) => {
               const badge = getPriceBadge(clinic.priceLevelPct);
               return (
                 <button
                   key={clinic.id}
                   onClick={() => navigate(`/clinic/${clinic.id}`)}
                   className="flex-shrink-0 w-[260px] bg-bg-elevated border border-border rounded-lg p-5 text-left hover:shadow-md transition-all snap-start"
-                  style={{
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? "translateX(0)" : "translateX(40px)",
-                    transition: "opacity 0.5s ease, transform 0.5s ease",
-                    transitionDelay: `${i * 80}ms`,
-                  }}
                 >
                   <div className="flex items-start gap-3 mb-4">
                     <div className="w-10 h-10 rounded-md bg-accent-soft text-accent flex items-center justify-center text-sm font-bold shrink-0">
@@ -123,7 +128,6 @@ export function ClinicCarousel() {
             })}
           </div>
 
-          {/* Navigation arrows */}
           <div className="flex justify-center gap-2 mt-6">
             <button
               onClick={() => scroll("left")}
@@ -140,7 +144,7 @@ export function ClinicCarousel() {
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
