@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { Shield, FileCheck, HandCoins, Scale } from "lucide-react";
 
 const PILLARS = [
@@ -24,36 +24,31 @@ const PILLARS = [
   },
 ];
 
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
+};
+
 export function TrustPillars() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
-      { threshold: 0.2 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section ref={sectionRef} id="trust" className="py-24 px-6 bg-bg-base">
-      <div className="max-w-wide mx-auto">
+    <section id="trust" className="py-24 px-6 bg-bg-base">
+      <motion.div
+        className="max-w-wide mx-auto"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {PILLARS.map((pillar, i) => {
+          {PILLARS.map((pillar) => {
             const Icon = pillar.icon;
             return (
-              <div
-                key={pillar.title}
-                className="text-center"
-                style={{
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                  transition: "opacity 0.5s ease, transform 0.5s ease",
-                  transitionDelay: `${i * 100}ms`,
-                }}
-              >
+              <motion.div key={pillar.title} variants={item} className="text-center">
                 <div className="w-10 h-10 rounded-lg bg-accent-soft text-accent flex items-center justify-center mx-auto mb-3">
                   <Icon className="w-5 h-5" />
                 </div>
@@ -61,11 +56,11 @@ export function TrustPillars() {
                 <p className="text-sm text-text-secondary leading-relaxed">
                   {pillar.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

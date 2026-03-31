@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const STEPS = [
   {
@@ -36,40 +36,32 @@ const STEPS = [
   },
 ];
 
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+};
+
+const card = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
+};
+
 export function HowItWorks() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section ref={sectionRef} id="how-it-works" className="py-24 px-6 bg-bg-base border-t border-border">
-      <div className="max-w-wide mx-auto">
+    <section id="how-it-works" className="py-24 px-6 bg-bg-base border-t border-border">
+      <motion.div
+        className="max-w-wide mx-auto"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="grid md:grid-cols-3 gap-8">
-          {STEPS.map((step, i) => (
-            <div
+          {STEPS.map((step) => (
+            <motion.div
               key={step.number}
-              className="bg-white border border-border rounded-lg p-8 transition-all duration-500 hover:shadow-md hover:-translate-y-0.5"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transitionDelay: `${i * 150}ms`,
-              }}
+              variants={card}
+              className="bg-white border border-border rounded-lg p-8 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-mono text-sm font-semibold">
@@ -91,10 +83,10 @@ export function HowItWorks() {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
