@@ -2,7 +2,10 @@ import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ToothSelector } from "@/components/ToothSelector";
+import { TreatmentAutocomplete } from "@/components/TreatmentAutocomplete";
+import { FileUpload, type UploadedFile } from "@/components/FileUpload";
 import type { Track, WizardForm } from "@/types";
+import type { TlvTreatment } from "@/lib/tlv-treatments";
 
 const PAIN_ANCHORS: Record<number, string> = {
   0: "Ingen smärta", 2: "Obehag", 3: "Märkbart", 5: "Påtagligt",
