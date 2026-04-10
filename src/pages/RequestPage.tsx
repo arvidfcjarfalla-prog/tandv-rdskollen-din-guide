@@ -241,7 +241,7 @@ export default function RequestPage() {
               {(form.selectedTreatments?.length ?? 0) > 0 && (
                 <div className="bg-bg-sunken rounded-md p-3 text-xs text-text-secondary">
                   <p className="font-semibold text-text-primary mb-1">Uppskattat referenspris (allmäntandvård):</p>
-                  {form.selectedTreatments.map((t) => (
+                  {(form.selectedTreatments ?? []).map((t) => (
                     <div key={t.code} className="flex justify-between py-0.5">
                       <span>{t.code} {t.name.length > 45 ? t.name.slice(0, 45) + "…" : t.name}</span>
                       <span className="font-medium">{t.generalPrice?.toLocaleString("sv-SE") ?? "–"} kr</span>
@@ -249,7 +249,7 @@ export default function RequestPage() {
                   ))}
                   <div className="flex justify-between pt-1.5 mt-1.5 border-t border-border font-semibold text-text-primary">
                     <span>Totalt referenspris</span>
-                    <span>{form.selectedTreatments.reduce((s, t) => s + (t.generalPrice ?? 0), 0).toLocaleString("sv-SE")} kr</span>
+                    <span>{(form.selectedTreatments ?? []).reduce((s, t) => s + (t.generalPrice ?? 0), 0).toLocaleString("sv-SE")} kr</span>
                   </div>
                 </div>
               )}
