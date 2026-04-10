@@ -108,7 +108,7 @@ export default function RequestPage() {
     if (s === 1 && form.selectedTeeth.length === 0 && !form.unknownTooth) e.teeth = "Välj minst en tand eller markera 'Vet inte exakt'";
     if (s === 2) {
       if (track === "exam" && !form.symptom.trim()) e.symptom = "Beskriv dina symptom";
-      if (track === "known" && !form.treatment.trim()) e.treatment = "Ange behandling";
+      if (track === "known" && form.selectedTreatments.length === 0 && !form.treatment.trim() && !form.treatmentFreeText.trim()) e.treatment = "Välj minst en behandling eller beskriv i fritext";
     }
     if (s === 5) {
       if (!form.name.trim()) e.name = "Ange ditt namn";
