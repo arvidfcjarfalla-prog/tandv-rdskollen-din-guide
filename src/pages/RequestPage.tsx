@@ -108,7 +108,7 @@ export default function RequestPage() {
     if (s === 1 && form.selectedTeeth.length === 0 && !form.unknownTooth) e.teeth = "Välj minst en tand eller markera 'Vet inte exakt'";
     if (s === 2) {
       if (track === "exam" && !form.symptom.trim()) e.symptom = "Beskriv dina symptom";
-      if (track === "known" && form.selectedTreatments.length === 0 && !form.treatment.trim() && !form.treatmentFreeText.trim()) e.treatment = "Välj minst en behandling eller beskriv i fritext";
+      if (track === "known" && (form.selectedTreatments?.length ?? 0) === 0 && !form.treatment.trim() && !form.treatmentFreeText?.trim()) e.treatment = "Välj minst en behandling eller beskriv i fritext";
     }
     if (s === 5) {
       if (!form.name.trim()) e.name = "Ange ditt namn";
@@ -238,10 +238,10 @@ export default function RequestPage() {
               </Field>
 
               {/* Estimated reference price summary */}
-              {form.selectedTreatments.length > 0 && (
+              {(form.selectedTreatments?.length ?? 0) > 0 && (
                 <div className="bg-bg-sunken rounded-md p-3 text-xs text-text-secondary">
                   <p className="font-semibold text-text-primary mb-1">Uppskattat referenspris (allmäntandvård):</p>
-                  {form.selectedTreatments.map((t) => (
+                  {(form.selectedTreatments ?? []).map((t) => (
                     <div key={t.code} className="flex justify-between py-0.5">
                       <span>{t.code} {t.name.length > 45 ? t.name.slice(0, 45) + "…" : t.name}</span>
                       <span className="font-medium">{t.generalPrice?.toLocaleString("sv-SE") ?? "–"} kr</span>
@@ -249,7 +249,7 @@ export default function RequestPage() {
                   ))}
                   <div className="flex justify-between pt-1.5 mt-1.5 border-t border-border font-semibold text-text-primary">
                     <span>Totalt referenspris</span>
-                    <span>{form.selectedTreatments.reduce((s, t) => s + (t.generalPrice ?? 0), 0).toLocaleString("sv-SE")} kr</span>
+                    <span>{(form.selectedTreatments ?? []).reduce((s, t) => s + (t.generalPrice ?? 0), 0).toLocaleString("sv-SE")} kr</span>
                   </div>
                 </div>
               )}
