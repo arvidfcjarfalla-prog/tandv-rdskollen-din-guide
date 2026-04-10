@@ -2,7 +2,10 @@ import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { ToothSelector } from "@/components/ToothSelector";
+import { TreatmentAutocomplete } from "@/components/TreatmentAutocomplete";
+import { FileUpload, type UploadedFile } from "@/components/FileUpload";
 import type { Track, WizardForm } from "@/types";
+import type { TlvTreatment } from "@/lib/tlv-treatments";
 
 const PAIN_ANCHORS: Record<number, string> = {
   0: "Ingen smärta", 2: "Obehag", 3: "Märkbart", 5: "Påtagligt",
@@ -54,9 +57,12 @@ const initialForm: WizardForm = {
   bleeding: false,
   knockedTooth: false,
   treatment: "",
+  selectedTreatments: [],
+  treatmentFreeText: "",
   previousSuggestion: "",
   specialistNeeded: "",
   materialPreference: "",
+  uploadedFiles: [],
   birthYear: "",
   bloodThinners: null,
   diabetes: null,
@@ -102,7 +108,7 @@ export default function RequestPage() {
     if (s === 1 && form.selectedTeeth.length === 0 && !form.unknownTooth) e.teeth = "Välj minst en tand eller markera 'Vet inte exakt'";
     if (s === 2) {
       if (track === "exam" && !form.symptom.trim()) e.symptom = "Beskriv dina symptom";
-      if (track === "known" && !form.treatment.trim()) e.treatment = "Ange behandling";
+      if (track === "known" && form.selectedTreatments.length === 0 && !form.treatment.trim() && !form.treatmentFreeText.trim()) e.treatment = "Välj minst en behandling eller beskriv i fritext";
     }
     if (s === 5) {
       if (!form.name.trim()) e.name = "Ange ditt namn";
@@ -218,17 +224,50 @@ export default function RequestPage() {
 
         {/* Step 2: Treatment (known) */}
         {step === 2 && track === "known" && (
-          <Card title="Vilken behandling behöver du?" subtitle="Ange behandling så kan klinikerna ge ett exakt pris.">
+          <Card title="Vilken behandling behöver du?" subtitle="Sök bland TLV:s referensbehandlingar eller beskriv i fritext.">
             <div className="space-y-5">
               <Field label="Behandling" error={errors.treatment}>
-                <input type="text" value={form.treatment} onChange={(e) => update("treatment", e.target.value)}
-                  placeholder="T.ex. tandkrona, rotfyllning, implantat..." className={inputCn(errors.treatment)} />
+                <TreatmentAutocomplete
+                  selected={form.selectedTreatments}
+                  onSelect={(t: TlvTreatment) => update("selectedTreatments", [...form.selectedTreatments, t])}
+                  onRemove={(code: string) => update("selectedTreatments", form.selectedTreatments.filter((t) => t.code !== code))}
+                  freeText={form.treatmentFreeText}
+                  onFreeTextChange={(text: string) => update("treatmentFreeText", text)}
+                  error={errors.treatment}
+                />
               </Field>
+
+              {/* Estimated reference price summary */}
+              {form.selectedTreatments.length > 0 && (
+                <div className="bg-bg-sunken rounded-md p-3 text-xs text-text-secondary">
+                  <p className="font-semibold text-text-primary mb-1">Uppskattat referenspris (allmäntandvård):</p>
+                  {form.selectedTreatments.map((t) => (
+                    <div key={t.code} className="flex justify-between py-0.5">
+                      <span>{t.code} {t.name.length > 45 ? t.name.slice(0, 45) + "…" : t.name}</span>
+                      <span className="font-medium">{t.generalPrice?.toLocaleString("sv-SE") ?? "–"} kr</span>
+                    </div>
+                  ))}
+                  <div className="flex justify-between pt-1.5 mt-1.5 border-t border-border font-semibold text-text-primary">
+                    <span>Totalt referenspris</span>
+                    <span>{form.selectedTreatments.reduce((s, t) => s + (t.generalPrice ?? 0), 0).toLocaleString("sv-SE")} kr</span>
+                  </div>
+                </div>
+              )}
+
               <Field label="Materialpreferens (valfritt)">
                 <div className="flex flex-wrap gap-1.5">
                   {MATERIAL_OPTIONS.map((m) => <Chip key={m} active={form.materialPreference === m} onClick={() => update("materialPreference", form.materialPreference === m ? "" : m)}>{m}</Chip>)}
                 </div>
               </Field>
+
+              <Field label="Bifoga dokument (valfritt)" hint="Röntgenbilder, behandlingsförslag eller andra dokument">
+                <FileUpload
+                  files={form.uploadedFiles}
+                  onAdd={(newFiles: UploadedFile[]) => update("uploadedFiles", [...form.uploadedFiles, ...newFiles])}
+                  onRemove={(index: number) => update("uploadedFiles", form.uploadedFiles.filter((_, i) => i !== index))}
+                />
+              </Field>
+
               <Field label="Tidigare förslag (valfritt)">
                 <textarea value={form.previousSuggestion} onChange={(e) => update("previousSuggestion", e.target.value)}
                   placeholder="Om du fått förslag från annan klinik..." rows={2} className={inputCn()} />

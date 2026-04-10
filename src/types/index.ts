@@ -1,3 +1,6 @@
+import type { TlvTreatment } from "@/lib/tlv-treatments";
+import type { UploadedFile } from "@/components/FileUpload";
+
 export interface Clinic {
   id: string;
   initials: string;
@@ -61,9 +64,12 @@ export interface WizardForm {
 
   // Step 2b: Treatment (known track)
   treatment: string;
+  selectedTreatments: TlvTreatment[];
+  treatmentFreeText: string;
   previousSuggestion: string;
   specialistNeeded: string;
   materialPreference: string;
+  uploadedFiles: UploadedFile[];
 
   // Step 3: Health
   birthYear: string;
