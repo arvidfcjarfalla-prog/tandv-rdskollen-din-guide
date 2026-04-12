@@ -7,6 +7,7 @@ import ConfirmPage from "@/pages/ConfirmPage";
 import ClinicProfilePage from "@/pages/ClinicProfilePage";
 import ClinicsPage from "@/pages/ClinicsPage";
 import MyPagesPage from "@/pages/MyPagesPage";
+import ClinicPortalPage from "@/pages/ClinicPortalPage";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/kliniker" element={<ClinicsPage />} />
         <Route path="/clinic/:id" element={<ClinicProfilePage />} />
         <Route path="/mina-sidor" element={<MyPagesPage />} />
+        <Route path="/klinikportal" element={<ClinicPortalPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
