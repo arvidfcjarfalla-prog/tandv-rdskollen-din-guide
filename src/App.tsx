@@ -19,6 +19,7 @@ export default function App() {
         <Route path="/kliniker" element={<ClinicsPage />} />
         <Route path="/clinic/:id" element={<ClinicProfilePage />} />
         <Route path="/mina-sidor" element={<MyPagesPage />} />
+        <Route path="/klinikportal" element={<ClinicPortalPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
