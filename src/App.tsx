@@ -7,6 +7,7 @@ import ConfirmPage from "@/pages/ConfirmPage";
 import ClinicProfilePage from "@/pages/ClinicProfilePage";
 import ClinicsPage from "@/pages/ClinicsPage";
 import MyPagesPage from "@/pages/MyPagesPage";
+import ClinicPortalPage from "@/pages/ClinicPortalPage";
 
 export default function App() {
   return (
