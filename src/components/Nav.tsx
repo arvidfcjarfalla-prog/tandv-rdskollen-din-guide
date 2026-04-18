@@ -143,17 +143,37 @@ export default function Nav() {
                 {label}
               </Link>
             ))}
-            <Link
-              to="/mina-sidor"
-              className={cn(
-                "py-3 px-3 rounded-md text-sm font-medium transition-colors",
-                isActive("/mina-sidor")
-                  ? "text-accent bg-accent-soft"
-                  : "text-text-secondary hover:text-text-primary hover:bg-bg-sunken"
-              )}
-            >
-              Mina sidor
-            </Link>
+            {user ? (
+              <>
+                <Link
+                  to={portalLink}
+                  className={cn(
+                    "py-3 px-3 rounded-md text-sm font-medium transition-colors",
+                    isActive(portalLink)
+                      ? "text-accent bg-accent-soft"
+                      : "text-text-secondary hover:text-text-primary hover:bg-bg-sunken"
+                  )}
+                >
+                  {isClinic ? "Klinikportal" : "Mina sidor"}
+                </Link>
+                <button
+                  onClick={async () => {
+                    await signOut();
+                    navigate("/");
+                  }}
+                  className="text-left py-3 px-3 rounded-md text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-bg-sunken transition-colors"
+                >
+                  Logga ut
+                </button>
+              </>
+            ) : (
+              <Link
+                to="/auth"
+                className="py-3 px-3 rounded-md text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-bg-sunken transition-colors"
+              >
+                Logga in
+              </Link>
+            )}
           </div>
         </div>
       )}
