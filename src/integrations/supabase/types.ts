@@ -14,16 +14,341 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      clinics: {
+        Row: {
+          active: boolean
+          address: string | null
+          area: string | null
+          created_at: string
+          description: string | null
+          email: string | null
+          id: string
+          name: string
+          org_number: string | null
+          phone: string | null
+          rating: number | null
+          rating_count: number | null
+          updated_at: string
+          website: string | null
+        }
+        Insert: {
+          active?: boolean
+          address?: string | null
+          area?: string | null
+          created_at?: string
+          description?: string | null
+          email?: string | null
+          id?: string
+          name: string
+          org_number?: string | null
+          phone?: string | null
+          rating?: number | null
+          rating_count?: number | null
+          updated_at?: string
+          website?: string | null
+        }
+        Update: {
+          active?: boolean
+          address?: string | null
+          area?: string | null
+          created_at?: string
+          description?: string | null
+          email?: string | null
+          id?: string
+          name?: string
+          org_number?: string | null
+          phone?: string | null
+          rating?: number | null
+          rating_count?: number | null
+          updated_at?: string
+          website?: string | null
+        }
+        Relationships: []
+      }
+      messages: {
+        Row: {
+          body: string
+          clinic_id: string | null
+          created_at: string
+          id: string
+          read_at: string | null
+          request_id: string
+          sender_id: string
+          sender_role: Database["public"]["Enums"]["app_role"]
+        }
+        Insert: {
+          body: string
+          clinic_id?: string | null
+          created_at?: string
+          id?: string
+          read_at?: string | null
+          request_id: string
+          sender_id: string
+          sender_role: Database["public"]["Enums"]["app_role"]
+        }
+        Update: {
+          body?: string
+          clinic_id?: string | null
+          created_at?: string
+          id?: string
+          read_at?: string | null
+          request_id?: string
+          sender_id?: string
+          sender_role?: Database["public"]["Enums"]["app_role"]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "messages_clinic_id_fkey"
+            columns: ["clinic_id"]
+            isOneToOne: false
+            referencedRelation: "clinics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "messages_request_id_fkey"
+            columns: ["request_id"]
+            isOneToOne: false
+            referencedRelation: "requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      offers: {
+        Row: {
+          clinic_id: string
+          created_at: string
+          earliest_date: string | null
+          id: string
+          line_items: Json | null
+          message: string | null
+          request_id: string
+          status: Database["public"]["Enums"]["offer_status"]
+          total_price: number
+          updated_at: string
+          valid_until: string | null
+        }
+        Insert: {
+          clinic_id: string
+          created_at?: string
+          earliest_date?: string | null
+          id?: string
+          line_items?: Json | null
+          message?: string | null
+          request_id: string
+          status?: Database["public"]["Enums"]["offer_status"]
+          total_price: number
+          updated_at?: string
+          valid_until?: string | null
+        }
+        Update: {
+          clinic_id?: string
+          created_at?: string
+          earliest_date?: string | null
+          id?: string
+          line_items?: Json | null
+          message?: string | null
+          request_id?: string
+          status?: Database["public"]["Enums"]["offer_status"]
+          total_price?: number
+          updated_at?: string
+          valid_until?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "offers_clinic_id_fkey"
+            columns: ["clinic_id"]
+            isOneToOne: false
+            referencedRelation: "clinics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "offers_request_id_fkey"
+            columns: ["request_id"]
+            isOneToOne: false
+            referencedRelation: "requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          birth_year: number | null
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+          phone: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          birth_year?: number | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          birth_year?: number | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      requests: {
+        Row: {
+          area: string | null
+          created_at: string
+          description: string | null
+          id: string
+          pain_level: number | null
+          patient_id: string
+          selected_teeth: string[] | null
+          status: Database["public"]["Enums"]["request_status"]
+          symptom: string | null
+          time_preference: string | null
+          track: string | null
+          treatment_free_text: string | null
+          treatments: Json | null
+          updated_at: string
+        }
+        Insert: {
+          area?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          pain_level?: number | null
+          patient_id: string
+          selected_teeth?: string[] | null
+          status?: Database["public"]["Enums"]["request_status"]
+          symptom?: string | null
+          time_preference?: string | null
+          track?: string | null
+          treatment_free_text?: string | null
+          treatments?: Json | null
+          updated_at?: string
+        }
+        Update: {
+          area?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          pain_level?: number | null
+          patient_id?: string
+          selected_teeth?: string[] | null
+          status?: Database["public"]["Enums"]["request_status"]
+          symptom?: string | null
+          time_preference?: string | null
+          track?: string | null
+          treatment_free_text?: string | null
+          treatments?: Json | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      reviews: {
+        Row: {
+          clinic_id: string
+          comment: string | null
+          created_at: string
+          id: string
+          patient_id: string
+          rating: number
+          request_id: string | null
+        }
+        Insert: {
+          clinic_id: string
+          comment?: string | null
+          created_at?: string
+          id?: string
+          patient_id: string
+          rating: number
+          request_id?: string | null
+        }
+        Update: {
+          clinic_id?: string
+          comment?: string | null
+          created_at?: string
+          id?: string
+          patient_id?: string
+          rating?: number
+          request_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reviews_clinic_id_fkey"
+            columns: ["clinic_id"]
+            isOneToOne: false
+            referencedRelation: "clinics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "reviews_request_id_fkey"
+            columns: ["request_id"]
+            isOneToOne: false
+            referencedRelation: "requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_roles: {
+        Row: {
+          clinic_id: string | null
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          clinic_id?: string | null
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          clinic_id?: string | null
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_roles_clinic_fk"
+            columns: ["clinic_id"]
+            isOneToOne: false
+            referencedRelation: "clinics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_user_clinic_id: { Args: { _user_id: string }; Returns: string }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "patient" | "clinic" | "admin"
+      offer_status: "pending" | "accepted" | "declined" | "withdrawn"
+      request_status: "open" | "quoted" | "accepted" | "declined" | "closed"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +475,10 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["patient", "clinic", "admin"],
+      offer_status: ["pending", "accepted", "declined", "withdrawn"],
+      request_status: ["open", "quoted", "accepted", "declined", "closed"],
+    },
   },
 } as const
