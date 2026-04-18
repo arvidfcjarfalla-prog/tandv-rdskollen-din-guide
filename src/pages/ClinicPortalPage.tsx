@@ -1,18 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Inbox, BarChart3, CalendarDays, Settings } from "lucide-react";
 import ClinicPortalInbox from "@/components/clinic-portal/ClinicPortalInbox";
 import ClinicPortalChat from "@/components/clinic-portal/ClinicPortalChat";
 import ClinicPortalStats from "@/components/clinic-portal/ClinicPortalStats";
 import ClinicPortalCalendar from "@/components/clinic-portal/ClinicPortalCalendar";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
 
 type Tab = "inbox" | "stats" | "calendar" | "settings";
 
-const CLINIC_NAME = "Distriktstandvården Sveavägen";
-
 export default function ClinicPortalPage() {
+  const { clinicId } = useAuth();
   const [tab, setTab] = useState<Tab>("inbox");
   const [chatRequest, setChatRequest] = useState<{ requestId: string; patientInitials: string } | null>(null);
+  const [clinic, setClinic] = useState<{ name: string; address: string | null; phone: string | null; email: string | null } | null>(null);
+
+  useEffect(() => {
+    if (!clinicId) return;
+    supabase
+      .from("clinics")
+      .select("name, address, phone, email")
+      .eq("id", clinicId)
+      .maybeSingle()
+      .then(({ data }) => setClinic(data as any));
+  }, [clinicId]);
+
+  const clinicName = clinic?.name || "Min klinik";
+  const initials = clinicName
+    .split(" ")
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 
   const tabs: { key: Tab; label: string; icon: typeof Inbox; badge?: number }[] = [
     { key: "inbox", label: "Inkorg", icon: Inbox, badge: 2 },
@@ -31,11 +51,11 @@ export default function ClinicPortalPage() {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="font-semibold text-xl text-zinc-900">{CLINIC_NAME}</h1>
+            <h1 className="font-semibold text-xl text-zinc-900">{clinicName}</h1>
             <p className="text-xs text-zinc-400">Klinikportal · Anbudshantering</p>
           </div>
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-zinc-700 to-zinc-900 text-white flex items-center justify-center text-sm font-bold shadow-sm">
-            DS
+            {initials}
           </div>
         </div>
 
@@ -72,7 +92,7 @@ export default function ClinicPortalPage() {
               <div className="grid gap-3">
                 <div>
                   <label className="text-[10px] font-medium text-zinc-400 uppercase tracking-wider">Kliniknamn</label>
-                  <input defaultValue={CLINIC_NAME} className="w-full mt-1 text-xs bg-zinc-50 rounded-md px-3 py-2.5 outline-none focus:ring-2 focus:ring-amber-200 border border-zinc-200" />
+                  <input defaultValue={clinicName} className="w-full mt-1 text-xs bg-zinc-50 rounded-md px-3 py-2.5 outline-none focus:ring-2 focus:ring-amber-200 border border-zinc-200" />
                 </div>
                 <div>
                   <label className="text-[10px] font-medium text-zinc-400 uppercase tracking-wider">Adress</label>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { SmileMark } from "./ToothIcon";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogOut } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 
 const NAV_LINKS = [
   { to: "/", label: "Hem" },
@@ -14,6 +15,11 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, roles, signOut } = useAuth();
+  const initials = (user?.email || "  ").slice(0, 2).toUpperCase();
+  const isClinic = roles.includes("clinic");
+  const portalLink = isClinic ? "/klinikportal" : "/mina-sidor";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -70,19 +76,42 @@ export default function Nav() {
           >
             Kom igång
           </Link>
-          <Link
-            to="/mina-sidor"
-            className={cn(
-              "hidden sm:flex w-8 h-8 rounded-full items-center justify-center text-xs font-bold transition-colors",
-              isActive("/mina-sidor")
-                ? "bg-accent text-white"
-                : "bg-accent-soft text-accent hover:bg-accent-medium"
-            )}
-            title="Mina sidor"
-            aria-label="Mina sidor"
-          >
-            AL
-          </Link>
+
+          {user ? (
+            <>
+              <Link
+                to={portalLink}
+                className={cn(
+                  "hidden sm:flex w-8 h-8 rounded-full items-center justify-center text-xs font-bold transition-colors",
+                  isActive(portalLink)
+                    ? "bg-accent text-white"
+                    : "bg-accent-soft text-accent hover:bg-accent-medium"
+                )}
+                title={isClinic ? "Klinikportal" : "Mina sidor"}
+                aria-label={isClinic ? "Klinikportal" : "Mina sidor"}
+              >
+                {initials}
+              </Link>
+              <button
+                onClick={async () => {
+                  await signOut();
+                  navigate("/");
+                }}
+                className="hidden sm:flex w-8 h-8 items-center justify-center text-text-tertiary hover:text-text-primary transition-colors"
+                title="Logga ut"
+                aria-label="Logga ut"
+              >
+                <LogOut className="w-4 h-4" />
+              </button>
+            </>
+          ) : (
+            <Link
+              to="/auth"
+              className="hidden sm:inline text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Logga in
+            </Link>
+          )}
 
           {/* Mobile hamburger */}
           <button
@@ -114,17 +143,37 @@ export default function Nav() {
                 {label}
               </Link>
             ))}
-            <Link
-              to="/mina-sidor"
-              className={cn(
-                "py-3 px-3 rounded-md text-sm font-medium transition-colors",
-                isActive("/mina-sidor")
-                  ? "text-accent bg-accent-soft"
-                  : "text-text-secondary hover:text-text-primary hover:bg-bg-sunken"
-              )}
-            >
-              Mina sidor
-            </Link>
+            {user ? (
+              <>
+                <Link
+                  to={portalLink}
+                  className={cn(
+                    "py-3 px-3 rounded-md text-sm font-medium transition-colors",
+                    isActive(portalLink)
+                      ? "text-accent bg-accent-soft"
+                      : "text-text-secondary hover:text-text-primary hover:bg-bg-sunken"
+                  )}
+                >
+                  {isClinic ? "Klinikportal" : "Mina sidor"}
+                </Link>
+                <button
+                  onClick={async () => {
+                    await signOut();
+                    navigate("/");
+                  }}
+                  className="text-left py-3 px-3 rounded-md text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-bg-sunken transition-colors"
+                >
+                  Logga ut
+                </button>
+              </>
+            ) : (
+              <Link
+                to="/auth"
+                className="py-3 px-3 rounded-md text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-bg-sunken transition-colors"
+              >
+                Logga in
+              </Link>
+            )}
           </div>
         </div>
       )}
