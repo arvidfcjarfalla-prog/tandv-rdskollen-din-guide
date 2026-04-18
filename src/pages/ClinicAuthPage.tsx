@@ -5,7 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function ClinicAuthPage() {
-  usePageTitle("Logga in – Klinik");
+  usePageTitle();
   const navigate = useNavigate();
   const { user, roles, loading: authLoading } = useAuth();
 

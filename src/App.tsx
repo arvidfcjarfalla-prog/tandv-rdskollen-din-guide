@@ -8,6 +8,9 @@ import ClinicProfilePage from "@/pages/ClinicProfilePage";
 import ClinicsPage from "@/pages/ClinicsPage";
 import MyPagesPage from "@/pages/MyPagesPage";
 import ClinicPortalPage from "@/pages/ClinicPortalPage";
+import AuthPage from "@/pages/AuthPage";
+import ClinicAuthPage from "@/pages/ClinicAuthPage";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 
 export default function App() {
   return (
@@ -19,8 +22,24 @@ export default function App() {
         <Route path="/confirm" element={<ConfirmPage />} />
         <Route path="/kliniker" element={<ClinicsPage />} />
         <Route path="/clinic/:id" element={<ClinicProfilePage />} />
-        <Route path="/mina-sidor" element={<MyPagesPage />} />
-        <Route path="/klinikportal" element={<ClinicPortalPage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/klinik/login" element={<ClinicAuthPage />} />
+        <Route
+          path="/mina-sidor"
+          element={
+            <ProtectedRoute>
+              <MyPagesPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/klinikportal"
+          element={
+            <ProtectedRoute requireRole="clinic">
+              <ClinicPortalPage />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

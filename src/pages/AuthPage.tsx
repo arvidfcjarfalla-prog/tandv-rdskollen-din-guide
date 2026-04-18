@@ -6,7 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function AuthPage() {
-  usePageTitle("Logga in");
+  usePageTitle();
   const navigate = useNavigate();
   const [params] = useSearchParams();
   const { user, roles, loading: authLoading } = useAuth();
