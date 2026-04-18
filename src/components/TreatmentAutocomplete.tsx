@@ -59,7 +59,7 @@ export function TreatmentAutocomplete({ selected, onSelect, onRemove, freeText, 
           {selected.map((t) => (
             <div key={t.code} className="flex items-center gap-1.5 bg-accent-soft border border-accent rounded-full pl-3 pr-1.5 py-1">
               <span className="text-xs font-medium text-accent">
-                <span className="opacity-60">{t.code}</span> {t.name.length > 40 ? t.name.slice(0, 40) + "…" : t.name}
+                {t.name.length > 40 ? t.name.slice(0, 40) + "…" : t.name}
               </span>
               <button
                 onClick={() => onRemove(t.code)}
