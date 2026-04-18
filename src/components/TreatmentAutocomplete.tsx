@@ -59,7 +59,7 @@ export function TreatmentAutocomplete({ selected, onSelect, onRemove, freeText, 
           {selected.map((t) => (
             <div key={t.code} className="flex items-center gap-1.5 bg-accent-soft border border-accent rounded-full pl-3 pr-1.5 py-1">
               <span className="text-xs font-medium text-accent">
-                <span className="opacity-60">{t.code}</span> {t.name.length > 40 ? t.name.slice(0, 40) + "…" : t.name}
+                {t.name.length > 40 ? t.name.slice(0, 40) + "…" : t.name}
               </span>
               <button
                 onClick={() => onRemove(t.code)}
@@ -101,19 +101,12 @@ export function TreatmentAutocomplete({ selected, onSelect, onRemove, freeText, 
                 onClick={() => handleSelect(t)}
                 onMouseEnter={() => setActiveIdx(i)}
                 className={cn(
-                  "w-full text-left px-3 py-2.5 flex items-start gap-3 transition-colors border-b border-border/50 last:border-0",
+                  "w-full text-left px-3 py-2.5 transition-colors border-b border-border/50 last:border-0",
                   i === activeIdx ? "bg-accent-soft" : "hover:bg-bg-sunken"
                 )}
               >
-                <span className="text-[10px] font-mono font-bold text-accent bg-accent-soft rounded px-1.5 py-0.5 shrink-0 mt-0.5">{t.code}</span>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm text-text-primary truncate">{t.name}</p>
-                  <p className="text-[11px] text-text-tertiary mt-0.5">
-                    <span className="text-text-secondary font-medium">{t.category}</span>
-                    {" · "}Ref: {formatPrice(t.generalPrice)}
-                    {t.specialistPrice && t.specialistPrice !== t.generalPrice && ` / ${formatPrice(t.specialistPrice)} specialist`}
-                  </p>
-                </div>
+                <p className="text-sm text-text-primary">{t.name}</p>
+                <p className="text-[11px] text-text-secondary mt-0.5">{t.category}</p>
               </button>
             ))}
           </div>
