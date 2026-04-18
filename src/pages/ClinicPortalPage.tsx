@@ -51,11 +51,11 @@ export default function ClinicPortalPage() {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="font-semibold text-xl text-zinc-900">{CLINIC_NAME}</h1>
+            <h1 className="font-semibold text-xl text-zinc-900">{clinicName}</h1>
             <p className="text-xs text-zinc-400">Klinikportal · Anbudshantering</p>
           </div>
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-zinc-700 to-zinc-900 text-white flex items-center justify-center text-sm font-bold shadow-sm">
-            DS
+            {initials}
           </div>
         </div>
 
@@ -92,7 +92,7 @@ export default function ClinicPortalPage() {
               <div className="grid gap-3">
                 <div>
                   <label className="text-[10px] font-medium text-zinc-400 uppercase tracking-wider">Kliniknamn</label>
-                  <input defaultValue={CLINIC_NAME} className="w-full mt-1 text-xs bg-zinc-50 rounded-md px-3 py-2.5 outline-none focus:ring-2 focus:ring-amber-200 border border-zinc-200" />
+                  <input defaultValue={clinicName} className="w-full mt-1 text-xs bg-zinc-50 rounded-md px-3 py-2.5 outline-none focus:ring-2 focus:ring-amber-200 border border-zinc-200" />
                 </div>
                 <div>
                   <label className="text-[10px] font-medium text-zinc-400 uppercase tracking-wider">Adress</label>
