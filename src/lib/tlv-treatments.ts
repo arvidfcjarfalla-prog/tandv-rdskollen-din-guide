@@ -192,6 +192,28 @@ export const tlvTreatments: TlvTreatment[] = [
   { code: "924", name: "Utbytesåtgärd: Fasad istället för fyllning, tandposition 4–5", generalPrice: 1830, specialistPrice: 1830, category: "Utbyte" },
   { code: "940", name: "Utbytesåtgärd: Ortodontisk slutning av entandslucka", generalPrice: 13365, specialistPrice: 15890, category: "Utbyte" },
   { code: "941", name: "Utbytesåtgärd: Ortodontisk slutning av entandslucka (efter krona)", generalPrice: 8090, specialistPrice: 9495, category: "Utbyte" },
+
+  // Vanliga patientfrågade behandlingar (utan TLV-kod)
+  { code: "X01", name: "Akut tandvård", generalPrice: null, specialistPrice: null, category: "Akut" },
+  { code: "X02", name: "Basundersökning", generalPrice: null, specialistPrice: null, category: "Undersökning" },
+  { code: "X03", name: "Hygienistbehandling", generalPrice: null, specialistPrice: null, category: "Tandsten & rengöring" },
+  { code: "X04", name: "Tandblekning (klinik eller hemblekning)", generalPrice: null, specialistPrice: null, category: "Estetik" },
+  { code: "X05", name: "Konsultation tandimplantat", generalPrice: null, specialistPrice: null, category: "Implantat" },
+  { code: "X06", name: "Konsultation Invisalign", generalPrice: null, specialistPrice: null, category: "Tandreglering" },
+  { code: "X07", name: "AirFlow – djuprengöring med pulver och vatten", generalPrice: null, specialistPrice: null, category: "Tandsten & rengöring" },
+  { code: "X08", name: "Konsultation tandreglering", generalPrice: null, specialistPrice: null, category: "Tandreglering" },
+  { code: "X09", name: "Konsultation estetisk tandvård", generalPrice: null, specialistPrice: null, category: "Estetik" },
+  { code: "X10", name: "Onlinetandläkare – digital rådgivning", generalPrice: null, specialistPrice: null, category: "Undersökning" },
+  { code: "X11", name: "Basundersökning inför Tiotandvård", generalPrice: null, specialistPrice: null, category: "Undersökning" },
+  { code: "X12", name: "Skalfasader (veneers)", generalPrice: null, specialistPrice: null, category: "Estetik" },
+  { code: "X13", name: "Implantatutredning", generalPrice: null, specialistPrice: null, category: "Implantat" },
+  { code: "X14", name: "Bettfysiologisk undersökning", generalPrice: null, specialistPrice: null, category: "Bettfysiologi" },
+  { code: "X15", name: "Bettskena (framtagning och justering)", generalPrice: null, specialistPrice: null, category: "Bettfysiologi" },
+  { code: "X16", name: "Fissurförsegling", generalPrice: null, specialistPrice: null, category: "Förebyggande" },
+  { code: "X17", name: "Traumaåtgärd – reparation av avbruten tand", generalPrice: null, specialistPrice: null, category: "Akut" },
+  { code: "X18", name: "Kontroll av munslemhinna (screening)", generalPrice: null, specialistPrice: null, category: "Undersökning" },
+  { code: "X19", name: "Byte av gamla fyllningar", generalPrice: null, specialistPrice: null, category: "Fyllning" },
+  { code: "X20", name: "Akut lagning av frakturerad fyllning eller tand", generalPrice: null, specialistPrice: null, category: "Akut" },
 ];
 
 /** Search treatments by keyword (code or name), returns max 8 results */
