@@ -1,19 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { FileText, Bell, User, History, MessageSquare } from "lucide-react";
+import { FileText, Bell, User, History } from "lucide-react";
 import PortalRequestsList, { MOCK_REQUESTS } from "@/components/portal/PortalRequestsList";
 import PortalNotifications, { unreadCount } from "@/components/portal/PortalNotifications";
-import PortalProfile, { MOCK_USER } from "@/components/portal/PortalProfile";
+import PortalProfile from "@/components/portal/PortalProfile";
 import PortalClinicHistory from "@/components/portal/PortalClinicHistory";
 import PortalChat from "@/components/portal/PortalChat";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
 
 type Tab = "requests" | "clinics" | "notifications" | "profile";
 
 export default function MyPagesPage() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [tab, setTab] = useState<Tab>("requests");
   const [chatClinic, setChatClinic] = useState<string | null>(null);
+  const [profile, setProfile] = useState<{ full_name: string | null; created_at: string } | null>(null);
+
+  useEffect(() => {
+    if (!user) return;
+    supabase
+      .from("profiles")
+      .select("full_name, created_at")
+      .eq("user_id", user.id)
+      .maybeSingle()
+      .then(({ data }) => setProfile(data as any));
+  }, [user]);
+
+  const displayName = profile?.full_name || user?.email?.split("@")[0] || "Användare";
+  const memberSince = profile?.created_at
+    ? new Date(profile.created_at).toLocaleDateString("sv-SE", { month: "long", year: "numeric" })
+    : "—";
+  const initials = displayName
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 
   const offersCount = MOCK_REQUESTS.filter((r) => r.status === "offers").length;
 
@@ -34,11 +59,11 @@ export default function MyPagesPage() {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="font-semibold text-xl text-zinc-900">{MOCK_USER.name}</h1>
-            <p className="text-xs text-zinc-400">Medlem sedan {MOCK_USER.memberSince}</p>
+            <h1 className="font-semibold text-xl text-zinc-900">{displayName}</h1>
+            <p className="text-xs text-zinc-400">Medlem sedan {memberSince}</p>
           </div>
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 text-white flex items-center justify-center text-sm font-bold shadow-sm">
-            {MOCK_USER.name.split(" ").map((n) => n[0]).join("")}
+            {initials}
           </div>
         </div>
 
@@ -66,16 +91,10 @@ export default function MyPagesPage() {
 
         {/* Tab content */}
         {tab === "requests" && (
-          <PortalRequestsList
-            onOpenChat={setChatClinic}
-            onViewClinic={handleViewClinic}
-          />
+          <PortalRequestsList onOpenChat={setChatClinic} onViewClinic={handleViewClinic} />
         )}
         {tab === "clinics" && (
-          <PortalClinicHistory
-            onViewClinic={handleViewClinic}
-            onOpenChat={setChatClinic}
-          />
+          <PortalClinicHistory onViewClinic={handleViewClinic} onOpenChat={setChatClinic} />
         )}
         {tab === "notifications" && <PortalNotifications />}
         {tab === "profile" && <PortalProfile />}
