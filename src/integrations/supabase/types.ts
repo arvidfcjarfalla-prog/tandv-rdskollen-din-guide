@@ -14,6 +14,70 @@ export type Database = {
   }
   public: {
     Tables: {
+      bookings: {
+        Row: {
+          clinic_id: string
+          created_at: string
+          duration_minutes: number | null
+          id: string
+          notes: string | null
+          offer_id: string
+          patient_id: string
+          request_id: string
+          scheduled_at: string | null
+          status: Database["public"]["Enums"]["booking_status"]
+          updated_at: string
+        }
+        Insert: {
+          clinic_id: string
+          created_at?: string
+          duration_minutes?: number | null
+          id?: string
+          notes?: string | null
+          offer_id: string
+          patient_id: string
+          request_id: string
+          scheduled_at?: string | null
+          status?: Database["public"]["Enums"]["booking_status"]
+          updated_at?: string
+        }
+        Update: {
+          clinic_id?: string
+          created_at?: string
+          duration_minutes?: number | null
+          id?: string
+          notes?: string | null
+          offer_id?: string
+          patient_id?: string
+          request_id?: string
+          scheduled_at?: string | null
+          status?: Database["public"]["Enums"]["booking_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "bookings_clinic_id_fkey"
+            columns: ["clinic_id"]
+            isOneToOne: false
+            referencedRelation: "clinics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "bookings_offer_id_fkey"
+            columns: ["offer_id"]
+            isOneToOne: false
+            referencedRelation: "offers"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "bookings_request_id_fkey"
+            columns: ["request_id"]
+            isOneToOne: false
+            referencedRelation: "requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       clinics: {
         Row: {
           active: boolean
@@ -23,9 +87,12 @@ export type Database = {
           description: string | null
           email: string | null
           id: string
+          lat: number | null
+          lng: number | null
           name: string
           org_number: string | null
           phone: string | null
+          postal_code: string | null
           rating: number | null
           rating_count: number | null
           updated_at: string
@@ -39,9 +106,12 @@ export type Database = {
           description?: string | null
           email?: string | null
           id?: string
+          lat?: number | null
+          lng?: number | null
           name: string
           org_number?: string | null
           phone?: string | null
+          postal_code?: string | null
           rating?: number | null
           rating_count?: number | null
           updated_at?: string
@@ -55,9 +125,12 @@ export type Database = {
           description?: string | null
           email?: string | null
           id?: string
+          lat?: number | null
+          lng?: number | null
           name?: string
           org_number?: string | null
           phone?: string | null
+          postal_code?: string | null
           rating?: number | null
           rating_count?: number | null
           updated_at?: string
@@ -203,14 +276,68 @@ export type Database = {
         }
         Relationships: []
       }
+      request_clinics: {
+        Row: {
+          claimed_at: string | null
+          clinic_id: string
+          created_at: string
+          declined_at: string | null
+          distance_km: number | null
+          id: string
+          invited_at: string
+          request_id: string
+          status: Database["public"]["Enums"]["request_clinic_status"]
+        }
+        Insert: {
+          claimed_at?: string | null
+          clinic_id: string
+          created_at?: string
+          declined_at?: string | null
+          distance_km?: number | null
+          id?: string
+          invited_at?: string
+          request_id: string
+          status?: Database["public"]["Enums"]["request_clinic_status"]
+        }
+        Update: {
+          claimed_at?: string | null
+          clinic_id?: string
+          created_at?: string
+          declined_at?: string | null
+          distance_km?: number | null
+          id?: string
+          invited_at?: string
+          request_id?: string
+          status?: Database["public"]["Enums"]["request_clinic_status"]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "request_clinics_clinic_id_fkey"
+            columns: ["clinic_id"]
+            isOneToOne: false
+            referencedRelation: "clinics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "request_clinics_request_id_fkey"
+            columns: ["request_id"]
+            isOneToOne: false
+            referencedRelation: "requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       requests: {
         Row: {
+          accepted_offer_id: string | null
           area: string | null
+          claimed_count: number
           created_at: string
           description: string | null
           id: string
           pain_level: number | null
           patient_id: string
+          postal_code: string | null
           selected_teeth: string[] | null
           status: Database["public"]["Enums"]["request_status"]
           symptom: string | null
@@ -221,12 +348,15 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          accepted_offer_id?: string | null
           area?: string | null
+          claimed_count?: number
           created_at?: string
           description?: string | null
           id?: string
           pain_level?: number | null
           patient_id: string
+          postal_code?: string | null
           selected_teeth?: string[] | null
           status?: Database["public"]["Enums"]["request_status"]
           symptom?: string | null
@@ -237,12 +367,15 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          accepted_offer_id?: string | null
           area?: string | null
+          claimed_count?: number
           created_at?: string
           description?: string | null
           id?: string
           pain_level?: number | null
           patient_id?: string
+          postal_code?: string | null
           selected_teeth?: string[] | null
           status?: Database["public"]["Enums"]["request_status"]
           symptom?: string | null
@@ -336,6 +469,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      claim_request_for_clinic: {
+        Args: { _clinic_id: string; _request_id: string }
+        Returns: Json
+      }
       get_user_clinic_id: { Args: { _user_id: string }; Returns: string }
       has_role: {
         Args: {
@@ -347,7 +484,14 @@ export type Database = {
     }
     Enums: {
       app_role: "patient" | "clinic" | "admin"
+      booking_status: "confirmed" | "rescheduled" | "cancelled" | "completed"
       offer_status: "pending" | "accepted" | "declined" | "withdrawn"
+      request_clinic_status:
+        | "invited"
+        | "claimed"
+        | "declined"
+        | "closed"
+        | "quoted"
       request_status: "open" | "quoted" | "accepted" | "declined" | "closed"
     }
     CompositeTypes: {
@@ -477,7 +621,15 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["patient", "clinic", "admin"],
+      booking_status: ["confirmed", "rescheduled", "cancelled", "completed"],
       offer_status: ["pending", "accepted", "declined", "withdrawn"],
+      request_clinic_status: [
+        "invited",
+        "claimed",
+        "declined",
+        "closed",
+        "quoted",
+      ],
       request_status: ["open", "quoted", "accepted", "declined", "closed"],
     },
   },
