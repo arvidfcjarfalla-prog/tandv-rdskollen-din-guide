@@ -6,6 +6,7 @@ import { TreatmentAutocomplete } from "@/components/TreatmentAutocomplete";
 import { FileUpload, type UploadedFile } from "@/components/FileUpload";
 import type { Track, WizardForm } from "@/types";
 import type { TlvTreatment } from "@/lib/tlv-treatments";
+import { supabase } from "@/integrations/supabase/client";
 
 const PAIN_ANCHORS: Record<number, string> = {
   0: "Ingen smärta", 2: "Obehag", 3: "Märkbart", 5: "Påtagligt",
@@ -120,9 +121,54 @@ export default function RequestPage() {
     return Object.keys(e).length === 0;
   };
 
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitResult, setSubmitResult] = useState<{ requestId: string; isNewAccount: boolean; magicLinkSent: boolean; invitedClinics: number } | null>(null);
+
   const next = () => { if (validate(step)) setStep((s) => s + 1); };
   const back = () => { step === 0 ? navigate("/") : setStep((s) => s - 1); setErrors({}); };
-  const submit = () => { if (validate(step)) navigate("/compare"); };
+
+  const submit = async () => {
+    if (!validate(step)) return;
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("create-request-with-matching", {
+        body: {
+          postal_code: postal,
+          patient: {
+            name: form.name,
+            email: form.email,
+            phone: form.phone,
+            birth_year: form.birthYear ? parseInt(form.birthYear) : undefined,
+          },
+          request: {
+            track,
+            selected_teeth: form.selectedTeeth,
+            symptom: form.symptom,
+            pain_level: form.painLevel,
+            treatment_free_text: form.treatmentFreeText,
+            treatments: form.selectedTreatments,
+            description: form.description,
+            time_preference: form.timePreference,
+          },
+        },
+      });
+      if (error) throw error;
+      if ((data as any)?.error) throw new Error((data as any).error);
+      const r = data as { request_id: string; is_new_account: boolean; magic_link_sent: boolean; invited_clinics: number };
+      setSubmitResult({
+        requestId: r.request_id,
+        isNewAccount: r.is_new_account,
+        magicLinkSent: r.magic_link_sent,
+        invitedClinics: r.invited_clinics,
+      });
+    } catch (err: any) {
+      setSubmitError(err?.message ?? "Något gick fel. Försök igen.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   const dots = Array.from({ length: TOTAL_STEPS }, (_, i) => i);
 
