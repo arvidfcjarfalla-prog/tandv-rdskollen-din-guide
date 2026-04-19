@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { FileText, Bell, User, History } from "lucide-react";
-import PortalRequestsList, { MOCK_REQUESTS } from "@/components/portal/PortalRequestsList";
+import PortalRequestsList from "@/components/portal/PortalRequestsList";
 import PortalNotifications, { unreadCount } from "@/components/portal/PortalNotifications";
 import PortalProfile from "@/components/portal/PortalProfile";
 import PortalClinicHistory from "@/components/portal/PortalClinicHistory";
@@ -40,7 +40,7 @@ export default function MyPagesPage() {
     .slice(0, 2)
     .toUpperCase();
 
-  const offersCount = MOCK_REQUESTS.filter((r) => r.status === "offers").length;
+  const offersCount = 0;
 
   const tabs: { key: Tab; label: string; icon: typeof FileText; badge: number }[] = [
     { key: "requests", label: "Förfrågningar", icon: FileText, badge: offersCount },
