@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import { Toaster } from "sonner";
 import Layout from "@/components/Layout";
 import LandingPage from "@/pages/LandingPage";
 import RequestPage from "@/pages/RequestPage";
@@ -14,7 +15,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <Toaster position="top-center" richColors />
+      <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<LandingPage />} />
         <Route path="/request" element={<RequestPage />} />
@@ -42,6 +45,7 @@ export default function App() {
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
-    </Routes>
+      </Routes>
+    </>
   );
 }
