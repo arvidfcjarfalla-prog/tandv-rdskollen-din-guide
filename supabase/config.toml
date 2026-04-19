@@ -1,1 +1,13 @@
 project_id = "bosnheihomzlszubnyrz"
+
+[functions.create-request-with-matching]
+verify_jwt = false
+
+[functions.claim-request]
+verify_jwt = false
+
+[functions.accept-offer]
+verify_jwt = false
+
+[functions.create-request]
+verify_jwt = false
