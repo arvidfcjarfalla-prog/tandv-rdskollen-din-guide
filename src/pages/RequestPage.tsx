@@ -172,6 +172,40 @@ export default function RequestPage() {
 
   const dots = Array.from({ length: TOTAL_STEPS }, (_, i) => i);
 
+  if (submitResult) {
+    return (
+      <div className="min-h-screen bg-bg-base py-12 px-6 flex items-center">
+        <div className="max-w-content mx-auto w-full">
+          <div className="bg-bg-elevated rounded-lg p-8 shadow-md text-center">
+            <div className="w-14 h-14 mx-auto rounded-full bg-positive/15 text-positive flex items-center justify-center mb-4">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </div>
+            <h1 className="font-display text-2xl text-text-primary mb-2">Tack — din förfrågan är skickad!</h1>
+            <p className="text-text-secondary text-sm mb-1">
+              Vi har skickat den till {submitResult.invitedClinics} närliggande {submitResult.invitedClinics === 1 ? "klinik" : "kliniker"}.
+            </p>
+            <p className="text-text-secondary text-sm mb-6">Du får mail så fort en klinik svarat med en offert.</p>
+            {submitResult.magicLinkSent && (
+              <div className="bg-bg-sunken rounded-md p-4 mb-6 text-left text-xs text-text-secondary">
+                <p className="font-semibold text-text-primary mb-1">Ett konto har skapats åt dig</p>
+                <p>Vi har mailat <span className="font-mono">{form.email}</span> en inloggningslänk så du kan följa dina offerter på Mina sidor.</p>
+              </div>
+            )}
+            <div className="flex flex-col sm:flex-row gap-2 justify-center">
+              <button onClick={() => navigate("/mina-sidor")} className="bg-accent hover:bg-accent-hover text-white px-6 py-2.5 rounded-md font-medium text-sm transition-colors">
+                Gå till Mina sidor
+              </button>
+              <button onClick={() => navigate("/")} className="px-6 py-2.5 rounded-md font-medium text-sm border border-border hover:bg-bg-sunken transition-colors">
+                Till startsidan
+              </button>
+            </div>
+            <p className="mt-4 text-text-tertiary text-[11px]">Referensnummer: {submitResult.requestId.slice(0, 8)}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-bg-base py-12 px-6">
       <div className="max-w-content mx-auto">
@@ -419,9 +453,12 @@ export default function RequestPage() {
               </label>
               {errors.consent && <p className="text-danger text-xs">{errors.consent}</p>}
             </div>
+            {submitError && <p className="text-danger text-xs mt-3">{submitError}</p>}
             <div className="mt-6 flex justify-between">
-              <button onClick={back} className="px-5 py-2.5 text-text-secondary hover:text-text-primary transition-colors font-medium text-sm">Tillbaka</button>
-              <button onClick={submit} className="bg-accent hover:bg-accent-hover text-white px-6 py-2.5 rounded-md font-medium text-sm transition-colors">Skicka förfrågan</button>
+              <button onClick={back} disabled={submitting} className="px-5 py-2.5 text-text-secondary hover:text-text-primary transition-colors font-medium text-sm disabled:opacity-50">Tillbaka</button>
+              <button onClick={submit} disabled={submitting} className="bg-accent hover:bg-accent-hover text-white px-6 py-2.5 rounded-md font-medium text-sm transition-colors disabled:opacity-60">
+                {submitting ? "Skickar…" : "Skicka förfrågan"}
+              </button>
             </div>
           </Card>
         )}
